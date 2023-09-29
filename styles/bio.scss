@@ -21,8 +21,14 @@ ul,a,a:link, a:visited{
     width:100%;
     background-color: $navbar-color;
     display: inline-block;
-    padding-top: 16px;
+    padding-top: 24px;
     
+}
+@include tablet{
+    .navbar{
+        padding-top: 36px;
+        
+    }
 }
 .navbar {&-list{
     display: flex;
