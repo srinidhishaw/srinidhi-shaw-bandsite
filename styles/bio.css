@@ -1,0 +1,250 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format();
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextDemi";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format();
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextBold";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format();
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirNext", sans-serif;
+  box-sizing: border-box;
+}
+
+ul, a, a:link, a:visited {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar {
+  text-align: center;
+  width: 100%;
+  background-color: #323232;
+  display: inline-block;
+  padding-top: 16px;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-list__item {
+  text-align: center;
+  width: 50%;
+}
+
+.navbar-list__title {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-list__item hr {
+  border: 3px solid #fff;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+  .navbar-list {
+    margin-bottom: 0;
+  }
+  .navbar-list__item {
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+  }
+  .navbar-list__title {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 20vw;
+  }
+}
+.page-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "AvenirNext", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "AvenirNextBold", sans-serif;
+}
+
+.hero, .about, .photogallery {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  position: relative;
+  text-align: left;
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.hero-content__title {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  margin-left: 16px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (min-width: 768px) {
+  .about-content, .photogallery-content {
+    margin: 36px;
+  }
+}
+.about-content, .photogallery-content {
+  margin: 16px;
+}
+
+.about-content__description1, .about-content__description2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .about-content__description2 {
+    flex-wrap: nowrap;
+    text-align: justify;
+    justify-content: space-between;
+  }
+  .about-content__description2 p {
+    padding: 16px;
+  }
+}
+.about-content__image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photogallery__image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photogallery {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .photogallery-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+.footer-list--no-mobile {
+  display: none;
+}
+
+.footer-container {
+  padding: 16px;
+  background-color: #323232;
+  display: inline-block;
+  width: 100%;
+}
+
+.footer-list__socials {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer-list__item {
+  padding: 16px 0;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .footer-list1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 16px;
+    position: relative;
+  }
+  .footer-list--no-mobile {
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    padding-left: 60%;
+  }
+  .footer-container {
+    padding: 16px;
+    background-color: #323232;
+    display: inline-block;
+    width: 100%;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .footer-list__item {
+    line-height: 2;
+    padding: 16px 0;
+    color: #fff;
+  }
+  .footer {
+    padding: 16px;
+    background-color: #323232;
+    display: flex;
+    width: 100%;
+  }
+  .page1-header {
+    display: none;
+  }
+}/*# sourceMappingURL=bio.css.map */
