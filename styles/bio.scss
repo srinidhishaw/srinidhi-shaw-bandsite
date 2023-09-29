@@ -102,12 +102,31 @@ ul,a,a:link, a:visited{
     margin-bottom: 0;
 }}
 
-.section-header{
+.section{&-header{
     font-size: $mobile-section-header--size;
     line-height:$mobile-section-header--lineheight;
     font-weight: $mobile-section-header--textweight;
     color: $navbar-text;
     font-family:"AvenirNextBold",sans-serif;
+}}
+@include tablet{
+    .page{&-header{
+        font-size: $tablet-page-header--size;
+        line-height:$tablet-page-header--lineheight;
+        font-weight: $tablet-page-header--textweight;
+        color: $navbar-text;
+        font-family:"AvenirNext",sans-serif;
+        margin-top: 0;
+        margin-bottom: 0;
+    }}
+    
+    .section{&-header{
+        font-size: $tablet-section-header--size;
+        line-height:$tablet-section-header--lineheight;
+        font-weight: $tablet-section-header--textweight;
+        color: $navbar-text;
+        font-family:"AvenirNextBold",sans-serif;
+    }}
 }
 .hero,.about,.photogallery{
     margin-top: 0;
