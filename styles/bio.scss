@@ -38,7 +38,7 @@ ul,a,a:link, a:visited{
 }}
 .navbar{&-list{&__item{
     text-align: center;
-    width: 50%;
+    width: 33%;
     
 }}}
 .navbar{&-list{&__title{
@@ -65,9 +65,11 @@ ul,a,a:link, a:visited{
     }}}
     .navbar{&-list{&__title{
         display: flex;
+        justify-content: flex-start;
         align-content: center;
         flex-wrap: wrap;
-        width:20vw;
+        // width:30%;
+        margin: 0 36px;
     }}}
     
 }
@@ -99,27 +101,35 @@ ul,a,a:link, a:visited{
     
 // }
 .page{&-header{
-    font-size: $mobile-page-header--size;
-    line-height:$mobile-page-header--lineheight;
-    font-weight: $mobile-page-header--textweight;
+    font-size: $mobile-section-header--size;
+    line-height:$mobile-section-header--lineheight;
+    font-weight: $mobile-section-header--textweight;
     color: $navbar-text;
     font-family:"AvenirNext",sans-serif;
     margin-top: 0;
     margin-bottom: 0;
 }}
 
+.hero{&-content{&__title{
+    font-size: $mobile-page-header--size;
+    line-height:$mobile-page-header--lineheight;
+    font-weight: $mobile-page-header--textweight;
+    color: $navbar-text;
+    font-family:"AvenirNextBold",sans-serif;
+}}}
+
 .section{&-header{
-    font-size: $mobile-section-header--size;
-    line-height:$mobile-section-header--lineheight;
-    font-weight: $mobile-section-header--textweight;
+    font-size: $mobile-sub-header--size;
+    line-height:$mobile-sub-header--lineheight;
+    font-weight: $mobile-sub-header--textweight;
     color: $navbar-text;
     font-family:"AvenirNextBold",sans-serif;
 }}
 @include tablet{
     .page{&-header{
-        font-size: $tablet-page-header--size;
-        line-height:$tablet-page-header--lineheight;
-        font-weight: $tablet-page-header--textweight;
+        font-size: $desktop-section-header--size;
+        line-height:$desktop-section-header--lineheight;
+        font-weight: $desktop-section-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNext",sans-serif;
         margin-top: 0;
@@ -127,12 +137,19 @@ ul,a,a:link, a:visited{
     }}
     
     .section{&-header{
-        font-size: $tablet-section-header--size;
-        line-height:$tablet-section-header--lineheight;
-        font-weight: $tablet-section-header--textweight;
+        font-size: $desktop-sub-header--size;
+        line-height:$desktop-sub-header--lineheight;
+        font-weight: $desktop-sub-header--textweight;
+        color: $navbar-text;
+        font-family:"AvenirNextDemi",sans-serif;
+    }}
+    .hero{&-content{&__title{
+        font-size: $desktop-page-header--size;
+        line-height:$desktop-page-header--lineheight;
+        font-weight: $desktop-page-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextBold",sans-serif;
-    }}
+    }}}
 }
 .hero,.about,.photogallery{
     margin-top: 0;
@@ -142,6 +159,7 @@ ul,a,a:link, a:visited{
     height: auto;
 }
 .hero-content{
+    display: flex;
     position: relative;
     text-align: left;
     background-color: rgba(0, 0, 0,1);
@@ -150,16 +168,18 @@ ul,a,a:link, a:visited{
 }
 .hero-content__title{
     position: absolute;
-    top: 50%;
+    display: flex;
+    align-self: center;
+    // top: 50%;
     color: $navbar-text;
     margin-left: 16px;
-
 }
 .hero-image img{
+    display: flex;
     width: 100%;
     height: auto;
     opacity: 0.5;
-    object-position: center;
+    object-position:center;
 }
 @include tablet{
     .about-content, .photogallery-content{
@@ -172,15 +192,27 @@ ul,a,a:link, a:visited{
 .about-content__description1,.about-content__description2{
     display: flex;
     flex-wrap: wrap;
+    font-size: $mobile-bodycopy--size;
+        line-height:$mobile-bodycopy--lineheight;
+        font-weight: $mobile-bodycopy--textweight;
 }
-@include tablet{
+@include tablet {
+    .hero-content__title{
+        margin-left: 36px;
+    }
     .about-content__description2{
         flex-wrap: nowrap;
         text-align: justify;
         justify-content: space-between;
     }
-    .about-content__description2 p{
-        padding: 16px;
+    .about-content__description2,.about-content__description1 p{
+        padding: 36px;
+        font-size: $desktop-bodycopy--size;
+        line-height:$desktop-bodycopy--lineheight;
+        font-weight: $desktop-bodycopy--textweight;
+    }
+    .about-content__title,.about-content__image{
+        margin:36px;
     }
 }
 
