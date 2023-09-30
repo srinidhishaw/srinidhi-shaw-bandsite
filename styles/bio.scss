@@ -158,29 +158,33 @@ ul,a,a:link, a:visited{
     width: 100%;
     height: auto;
 }
-.hero-content{
+.hero{
+    &-content{
     display: flex;
     position: relative;
     text-align: left;
     background-color: rgba(0, 0, 0,1);
     margin-top: 0;
     padding-top: 0; 
-}
-.hero-content__title{
-    position: absolute;
+    }
+    &-content__title{
+        position: absolute;
     display: flex;
     align-self: center;
     // top: 50%;
     color: $navbar-text;
     margin-left: 16px;
-}
-.hero-image img{
-    display: flex;
+    }
+    &-image img{
+        display: flex;
     width: 100%;
     height: auto;
     opacity: 0.5;
     object-position:center;
+    }
+
 }
+
 @include tablet{
     .about-content, .photogallery-content{
         margin: 36px;
@@ -205,14 +209,19 @@ ul,a,a:link, a:visited{
         text-align: justify;
         justify-content: space-between;
     }
-    .about-content__description2,.about-content__description1 p{
+    .text p{
         padding: 36px;
         font-size: $desktop-bodycopy--size;
         line-height:$desktop-bodycopy--lineheight;
         font-weight: $desktop-bodycopy--textweight;
     }
-    .about-content__title,.about-content__image{
+    .about-content__title,.text{
         margin:36px;
+        // padding: 0 36px;
+    }
+    .about-content__image{
+        margin:36px;
+        padding: 0 36px;
     }
 }
 
@@ -239,6 +248,7 @@ ul,a,a:link, a:visited{
 }
 .photogallery{
     display: inline-block;
+    background-color: #FAFAFA;
 }
 @include tablet{
     .photogallery-content{
@@ -249,6 +259,10 @@ ul,a,a:link, a:visited{
     // margin: 0 auto;
     // display: flex;
     flex-wrap: wrap;
+    margin: 36px;
+    }
+    .photogallery-title{
+        margin: 36px;
     }
 }
 .footer-list--no-mobile{
@@ -266,49 +280,67 @@ ul,a,a:link, a:visited{
 }}}
 .footer{&-list{
     display: flex;
-    align-items: flex-start;
+    align-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
 
 }}
 .footer{&-list{&__item{
-    // line-height: 0.5;
     padding: 16px 0;
     color: #fff;
+    font-size: $mobile-footercopy--size;
+        line-height:$mobile-footercopy--lineheight;
+        font-weight: $mobile-footercopy--textweight;
 }}}
 @include tablet{
     .footer{&-list1{
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin: 16px;
-        position: relative;
+        // margin: 36px;
+        // position: relative;
     }}
+    .footer-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
+        // width: 100%;
+    }
     .footer-list--no-mobile{
         display: flex;
-        justify-content: flex-end;
+        // justify-content: flex-end;
         color: #fff;
-        padding-left: 60%;
+        // margin: 36px;
+        // padding-left: 60%;
+        
+        // text-align: right;
     }
     .footer{&-container{
-        padding:16px;
+        // padding:16px;
         background-color: $navbar-color;
         display: inline-block;
-        width: 100%;
+        // width: 100%;
+        // height: auto;
+        // padding: 36px;
     }}
     .footer{&-list{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         text-align: left;
+        flex-wrap: nowrap;
     }}
     .footer{&-list{&__item{
         line-height: 2;
-        padding: 16px 0;
+        // padding: 16px 0;
         color: #fff;
+        font-size: $desktop-footercopy--size;
+        line-height:$desktop-footercopy--lineheight;
+        font-weight: $desktop-footercopy--textweight;
+        align-items: center;
     }}}
     .footer{
-        padding:16px;
+        // padding:16px;
         background-color: $navbar-color;
         display: flex;
         width: 100%;
@@ -316,6 +348,9 @@ ul,a,a:link, a:visited{
     .page1{&-header{
         display: none;
     }}
+    .subtitle{
+        margin:36px 0;
+    }
 
 }
 
