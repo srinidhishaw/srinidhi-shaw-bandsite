@@ -129,7 +129,7 @@ ul,a,a:link, a:visited{
     .page{&-header{
         font-size: $desktop-section-header--size;
         line-height:$desktop-section-header--lineheight;
-        font-weight: $desktop-section-header--textweight;
+        // font-weight: $desktop-section-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNext",sans-serif;
         margin-top: 0;
@@ -139,7 +139,7 @@ ul,a,a:link, a:visited{
     .section{&-header{
         font-size: $desktop-sub-header--size;
         line-height:$desktop-sub-header--lineheight;
-        font-weight: $desktop-sub-header--textweight;
+        // font-weight: $desktop-sub-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextDemi",sans-serif;
     }}
@@ -148,7 +148,7 @@ ul,a,a:link, a:visited{
             &__title{
         font-size: $desktop-page-header--size;
         line-height:$desktop-page-header--lineheight;
-        font-weight: $desktop-page-header--textweight;
+        // font-weight: $desktop-page-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextBold",sans-serif;
     }}}
@@ -177,7 +177,7 @@ ul,a,a:link, a:visited{
     margin-left: 16px;
     } 
     }
-    
+
     &-image img{
         display: flex;
     width: 100%;
@@ -189,63 +189,107 @@ ul,a,a:link, a:visited{
 }
 
 @include tablet{
-    .about-content, .photogallery-content{
+    .photogallery-content{
         margin: 36px;
     }
 }
-.about-content, .photogallery-content{
+.about{
+    &-content{
+        margin: 0 16px;
+        &__title{
+            font-size: $mobile-section-header--size;
+            line-height:$mobile-section-header--lineheight;
+            // font-weight: $desktop-section-header--textweight;
+            margin-top: 24px;
+            color:$navbar-color;
+            font-family:'AvenirNextDemi';
+        }
+        &__text{
+            .subheader p{
+                font-size: $mobile-sub-header--size;
+                line-height:$mobile-sub-header--lineheight;
+                font-weight: $mobile-sub-header--textweight;
+            }
+            .boldcopy{
+                font-size: $mobile-bodycopy--size;
+                line-height:$mobile-bodycopy--lineheight;
+                font-weight: 700;
+            }
+            .copy{
+                display: block;
+            }
+            .copy p{
+                padding-right: 36px;
+                font-size: $mobile-bodycopy--size;
+                line-height:$mobile-bodycopy--lineheight;
+                font-weight: $mobile-bodycopy--textweight;
+            }
+
+        }
+        &__image img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        
+        }
+}
+}
+.photogallery-content{
     margin: 16px;
 }
-.text__subheader,.text__copy{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: $mobile-bodycopy--size;
-        line-height:$mobile-bodycopy--lineheight;
-        font-weight: $mobile-bodycopy--textweight;
+.photogallery-title{
+    margin: 16px;
 }
 @include tablet {
     .hero-content__title{
         margin-left: 36px;
     }
-    .text__copy{
-        flex-wrap: nowrap;
-        text-align: justify;
-        justify-content: space-between;
-    }
-    .about-content__text{
-        padding: 0 36px;
-    }
-    .text__subheader p{
-        font-size: $desktop-sub-header--size;
-        line-height:$desktop-sub-header--lineheight;
-        font-weight: $desktop-sub-header--textweight;
-    }
-    .text__boldcopy{
-        font-size: $desktop-bodycopy--size;
-        line-height:$desktop-bodycopy--lineheight;
-        font-weight: 700;
-    }
-    .text__copy p{
-        padding-right: 36px;
-        font-size: $desktop-bodycopy--size;
-        line-height:$desktop-bodycopy--lineheight;
-        font-weight: $desktop-bodycopy--textweight;
-    }
-    .about-content__title,.about-content__text{
-        margin:36px;
-        // padding: 0 36px;
-    }
-    .about-content__image{
-        margin:36px;
-        padding: 0 36px;
-    }
+    
+    .about{
+        &-content{
+            &__text{
+                padding: 0 36px;
+                // margin:36px;
+                .copy{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    // flex-direction: row;
+                    text-align: left;
+                    justify-content: space-between;
+                }
+                .subheader p{
+                    font-size: $desktop-sub-header--size;
+                    line-height:$desktop-sub-header--lineheight;
+                    font-weight: $desktop-sub-header--textweight;
+                }
+                .boldcopy{
+                    font-size: $desktop-bodycopy--size;
+                    line-height:$desktop-bodycopy--lineheight;
+                    font-weight: 700;
+                }
+                .copy p{
+                    padding-right: 36px;
+                    font-size: $desktop-bodycopy--size;
+                    line-height:$desktop-bodycopy--lineheight;
+                    font-weight: $desktop-bodycopy--textweight;
+                }
+        }
+        &__title{
+            font-size: $desktop-section-header--size;
+            line-height:$desktop-section-header--lineheight;
+            margin:0 36px;
+            margin-top: 48px;
+            color:$navbar-color;
+            font-family:'AvenirNextDemi';
+        }
+        &__image{
+            margin:36px;
+            padding: 0 36px;
+        }
 }
-.about-content__image img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+}
+}
 
-}
 .photogallery-content__image img{
     width:100%;
     height: auto;
@@ -278,7 +322,7 @@ ul,a,a:link, a:visited{
     .photogallery-content{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
+        grid-gap: 36px;
     // padding: 100px 0;
     // margin: 0 auto;
     // display: flex;
@@ -305,7 +349,16 @@ ul,a,a:link, a:visited{
         background-color: $navbar-color;
         padding: 16px;
         &__header{
+            
             .list{
+                &__title{
+                    font-size: $desktop-sub-header--size;
+                    line-height:$desktop-sub-header--lineheight;
+                    font-weight: $desktop-footercopy--textweight;
+                    color: #fff;
+                    font-family: 'AvenirNextDemi';
+                    // margin-right: 108px;
+                }
                 &__socials{
                     display: flex;
                     justify-content: flex-start;
@@ -326,11 +379,22 @@ ul,a,a:link, a:visited{
             .item{
                 padding: 16px 0;
                 color: #fff;
-                font-size: $mobile-footercopy--size;
+                font-size: 10px;
                 line-height:$mobile-footercopy--lineheight;
                 font-weight: $mobile-footercopy--textweight;
             }
         }
+        .page-subheader{
+            font-size: 12px;
+            line-height:$desktop-footercopy--lineheight;
+            font-weight: $desktop-footercopy--textweight;
+            text-align: left;
+            color: #fff;
+        }
+        .page1-header{
+            color:#fff;
+        }
+        
 
     }
 }
@@ -339,27 +403,31 @@ ul,a,a:link, a:visited{
     .footer{
         background-color: $navbar-color;
         display: flex;
-        background-color: $navbar-color;
         width: 100%;
         height: auto;
-        padding: 36px;
+        // padding: 36px;
         
     &-content{
+        padding: 0 36px;
+        padding-top: 48px;
         &__header{
             display: flex;
             justify-content: space-between;
             align-items: center ;
             background-color: $navbar-color;
+            // margin:0 36px;
+                    // 
             .list{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 
                 &__title{
-                    font-size: $desktop-footercopy--size;
-                    line-height:$desktop-footercopy--lineheight;
+                    font-size: $desktop-sub-header--size;
+                    line-height:$desktop-sub-header--lineheight;
                     font-weight: $desktop-footercopy--textweight;
                     color: #fff;
+                    font-family: 'AvenirNextDemi';
                     margin-right: 108px;
                 }
                 &__socials{
@@ -390,22 +458,22 @@ ul,a,a:link, a:visited{
                 .item{
                     display: block;
                     // text-align: left;
-                    line-height: 2;
+                    // line-height: 2;
                     color: #fff;
-                    font-size: 10px;
+                    font-size: 12px;
                     line-height:$desktop-footercopy--lineheight;
-                    font-weight: $desktop-footercopy--textweight;
+                    // font-weight: $desktop-footercopy--textweight;
                     align-items: center;
                     width: 100%;
                     flex-wrap: nowrap;
                     // margin: 0 36px;
                         &__title{
                             margin-bottom:36px;
-                            font-weight: 700;
+                            font-family: 'AvenirNextDemi';
                         }
                         &__subtitle{
                             margin-bottom:36px;
-                            font-weight: 300;
+                            font-family: 'AvenirNext';
 
                         }
                 }
@@ -415,42 +483,15 @@ ul,a,a:link, a:visited{
             }}
             
             .page-subheader{
-                margin: 0 36px;
+                padding-bottom: 36px;
             }
             .page-subheader{
-                font-size: $desktop-footercopy--size;
+                font-size: 12px;
                 line-height:$desktop-footercopy--lineheight;
                 font-weight: $desktop-footercopy--textweight;
+                text-align: left;
                 color: #fff;
             }
-            
-        
-
-    
-    
-    
-    
-    // .footer{&-container{
-    //     // padding:16px;
-    //     background-color: $navbar-color;
-    //     display: inline-block;
-    //     // width: 100%;
-    //     // height: auto;
-    //     padding: 36px;
-    // }}
-    // .footer{&-list{&__item{
-        // line-height: 2;
-        // color: #fff;
-        // font-size: 10px;
-        // line-height:$desktop-footercopy--lineheight;
-        // font-weight: $desktop-footercopy--textweight;
-        // align-items: center;
-        // flex-wrap: nowrap;
-        // margin: 0 36px;
-        
-    // }}}
-    
-
 }
 }
 }
@@ -463,40 +504,7 @@ ul,a,a:link, a:visited{
         flex-wrap: nowrap;
         align-items: center;
         background-color: $navbar-color;
-    }}}
+    }
 }
-
-
-// .gallery {
-//   display: flex;
-//   flex-direction: column;
-//   margin: 0 20px;
-
-//   @include tablet {
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: space-evenly;
-//     align-content: space-evenly;
-// }
-
-//   &__item {
-//     text-align: center;
-//     background: lightblue;
-//     margin: 20px 0;
-//     padding: 20px 0;
-//     font-size: 5rem;
-//     border-radius: 5px;
-
-//     @include tablet {
-//       width: 40%;
-//       margin: 3vw 0;
-//       background: lightgreen;
-//     }
-//     @include desktop {
-//       width: 30%;
-//       margin: 1.25vw 0;
-//       background: lightpink;
-//     }
-
-//   }
-// }
+}
+}
