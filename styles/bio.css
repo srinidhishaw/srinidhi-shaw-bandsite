@@ -109,7 +109,6 @@ ul, a, a:link, a:visited {
   .page-header {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 700;
     color: #fff;
     font-family: "AvenirNext", sans-serif;
     margin-top: 0;
@@ -118,14 +117,12 @@ ul, a, a:link, a:visited {
   .section-header {
     font-size: 24px;
     line-height: 32px;
-    font-weight: 600;
     color: #fff;
     font-family: "AvenirNextDemi", sans-serif;
   }
   .hero-content__title {
     font-size: 60px;
     line-height: 68px;
-    font-weight: 700;
     color: #fff;
     font-family: "AvenirNextBold", sans-serif;
   }
@@ -163,57 +160,38 @@ ul, a, a:link, a:visited {
 }
 
 @media (min-width: 768px) {
-  .about-content, .photogallery-content {
+  .photogallery-content {
     margin: 36px;
   }
 }
-.about-content, .photogallery-content {
-  margin: 16px;
+.about-content {
+  margin: 0 16px;
 }
-
-.text__subheader, .text__copy {
-  display: flex;
-  flex-wrap: wrap;
+.about-content__title {
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 24px;
+  color: #323232;
+  font-family: "AvenirNextDemi";
+}
+.about-content__text .subheader p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.about-content__text .boldcopy {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.about-content__text .copy {
+  display: block;
+}
+.about-content__text .copy p {
+  padding-right: 36px;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-}
-
-@media (min-width: 768px) {
-  .hero-content__title {
-    margin-left: 36px;
-  }
-  .text__copy {
-    flex-wrap: nowrap;
-    text-align: justify;
-    justify-content: space-between;
-  }
-  .about-content__text {
-    padding: 0 36px;
-  }
-  .text__subheader p {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 600;
-  }
-  .text__boldcopy {
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 700;
-  }
-  .text__copy p {
-    padding-right: 36px;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
-  }
-  .about-content__title, .about-content__text {
-    margin: 36px;
-  }
-  .about-content__image {
-    margin: 36px;
-    padding: 0 36px;
-  }
 }
 .about-content__image img {
   width: 100%;
@@ -222,6 +200,56 @@ ul, a, a:link, a:visited {
      object-fit: cover;
 }
 
+.photogallery-content {
+  margin: 16px;
+}
+
+.photogallery-title {
+  margin: 16px;
+}
+
+@media (min-width: 768px) {
+  .hero-content__title {
+    margin-left: 36px;
+  }
+  .about-content__text {
+    padding: 0 36px;
+  }
+  .about-content__text .copy {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+    justify-content: space-between;
+  }
+  .about-content__text .subheader p {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  .about-content__text .boldcopy {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+  }
+  .about-content__text .copy p {
+    padding-right: 36px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  .about-content__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 36px;
+    margin-top: 48px;
+    color: #323232;
+    font-family: "AvenirNextDemi";
+  }
+  .about-content__image {
+    margin: 36px;
+    padding: 0 36px;
+  }
+}
 .photogallery-content__image img {
   width: 100%;
   height: auto;
@@ -253,7 +281,7 @@ ul, a, a:link, a:visited {
   .photogallery-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
+    grid-gap: 36px;
     flex-wrap: wrap;
     margin: 36px;
   }
@@ -264,6 +292,13 @@ ul, a, a:link, a:visited {
 .footer-content {
   background-color: #323232;
   padding: 16px;
+}
+.footer-content__header .list__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "AvenirNextDemi";
 }
 .footer-content__header .list__socials {
   display: flex;
@@ -284,19 +319,31 @@ ul, a, a:link, a:visited {
 .footer-content__list .item {
   padding: 16px 0;
   color: #fff;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 20px;
   font-weight: 400;
+}
+.footer-content .page-subheader {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
+}
+.footer-content .page1-header {
+  color: #fff;
 }
 
 @media (min-width: 768px) {
   .footer {
     background-color: #323232;
     display: flex;
-    background-color: #323232;
     width: 100%;
     height: auto;
-    padding: 36px;
+  }
+  .footer-content {
+    padding: 0 36px;
+    padding-top: 48px;
   }
   .footer-content__header {
     display: flex;
@@ -310,10 +357,11 @@ ul, a, a:link, a:visited {
     justify-content: space-between;
   }
   .footer-content__header .list__title {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 32px;
     font-weight: 400;
     color: #fff;
+    font-family: "AvenirNextDemi";
     margin-right: 108px;
   }
   .footer-content__header .list__socials .icon {
@@ -333,33 +381,32 @@ ul, a, a:link, a:visited {
   }
   .footer-content__list .item {
     display: block;
-    line-height: 2;
     color: #fff;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 20px;
-    font-weight: 400;
     align-items: center;
     width: 100%;
     flex-wrap: nowrap;
   }
   .footer-content__list .item__title {
     margin-bottom: 36px;
-    font-weight: 700;
+    font-family: "AvenirNextDemi";
   }
   .footer-content__list .item__subtitle {
     margin-bottom: 36px;
-    font-weight: 300;
+    font-family: "AvenirNext";
   }
   .footer-content .page1-header {
     display: none;
   }
   .footer-content .page-subheader {
-    margin: 0 36px;
+    padding-bottom: 36px;
   }
   .footer-content .page-subheader {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     font-weight: 400;
+    text-align: left;
     color: #fff;
   }
 }
