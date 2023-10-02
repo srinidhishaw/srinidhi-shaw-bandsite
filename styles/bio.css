@@ -34,7 +34,7 @@ ul, a, a:link, a:visited {
   width: 100%;
   background-color: #323232;
   display: inline-block;
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 .navbar-list {
   display: flex;
@@ -47,7 +47,7 @@ ul, a, a:link, a:visited {
   width: 50%;
 }
 .navbar-list__item hr {
-  border: 3px solid #fff;
+  border: 0.1875rem solid #fff;
   margin: 0;
 }
 .navbar-list__title {
@@ -60,7 +60,7 @@ ul, a, a:link, a:visited {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0;
-    padding-top: 36px;
+    padding-top: 2.25rem;
   }
   .navbar-list {
     margin-bottom: 0;
@@ -68,7 +68,7 @@ ul, a, a:link, a:visited {
   .navbar-list__item {
     display: flex;
     justify-content: center;
-    padding: 0 36px;
+    padding: 0 2.25rem;
     width: 33%;
   }
   .navbar-list__title {
@@ -76,7 +76,7 @@ ul, a, a:link, a:visited {
     justify-content: flex-start;
     align-content: center;
     flex-wrap: wrap;
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 .page-header {
@@ -89,20 +89,41 @@ ul, a, a:link, a:visited {
   margin-bottom: 0;
 }
 
-.hero-content__title {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-  color: #fff;
-  font-family: "AvenirNextBold", sans-serif;
-}
-
 .section-header {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
   color: #fff;
   font-family: "AvenirNextBold", sans-serif;
+}
+
+.hero-content {
+  display: flex;
+  position: relative;
+  text-align: left;
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
+  padding-top: 0;
+}
+.hero-content__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "AvenirNextBold", sans-serif;
+  position: absolute;
+  display: flex;
+  align-self: center;
+  color: #fff;
+  margin-left: 1rem;
+}
+.hero-image img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media (min-width: 768px) {
@@ -135,42 +156,18 @@ ul, a, a:link, a:visited {
   height: auto;
 }
 
-.hero-content {
-  display: flex;
-  position: relative;
-  text-align: left;
-  background-color: rgb(0, 0, 0);
-  margin-top: 0;
-  padding-top: 0;
-}
-.hero-content__title {
-  position: absolute;
-  display: flex;
-  align-self: center;
-  color: #fff;
-  margin-left: 16px;
-}
-.hero-image img {
-  display: flex;
-  width: 100%;
-  height: auto;
-  opacity: 0.5;
-  -o-object-position: center;
-     object-position: center;
-}
-
 @media (min-width: 768px) {
   .photogallery-content {
-    margin: 36px;
+    margin: 2.25rem;
   }
 }
 .about-content {
-  margin: 0 16px;
+  padding: 0 1rem;
 }
 .about-content__title {
   font-size: 24px;
   line-height: 32px;
-  margin-top: 24px;
+  margin-top: 1.5rem;
   color: #323232;
   font-family: "AvenirNextDemi";
 }
@@ -188,7 +185,7 @@ ul, a, a:link, a:visited {
   display: block;
 }
 .about-content__text .copy p {
-  padding-right: 36px;
+  padding-right: 2.25rem;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -201,19 +198,22 @@ ul, a, a:link, a:visited {
 }
 
 .photogallery-content {
-  margin: 16px;
+  margin: 1rem;
 }
 
 .photogallery-title {
-  margin: 16px;
+  margin: 1rem;
 }
 
 @media (min-width: 768px) {
   .hero-content__title {
-    margin-left: 36px;
+    margin-left: 2.25rem;
+  }
+  .about-content {
+    padding: 0 2.25rem;
   }
   .about-content__text {
-    padding: 0 36px;
+    margin: 0 2.25rem;
   }
   .about-content__text .copy {
     display: flex;
@@ -225,14 +225,16 @@ ul, a, a:link, a:visited {
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
+    color: #323232;
   }
   .about-content__text .boldcopy {
     font-size: 14px;
     line-height: 22px;
     font-weight: 700;
+    color: #323232;
   }
   .about-content__text .copy p {
-    padding-right: 36px;
+    padding-right: 2.25rem;
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
@@ -240,14 +242,13 @@ ul, a, a:link, a:visited {
   .about-content__title {
     font-size: 36px;
     line-height: 44px;
-    margin: 0 36px;
-    margin-top: 48px;
+    margin-top: 3rem;
     color: #323232;
     font-family: "AvenirNextDemi";
   }
   .about-content__image {
-    margin: 36px;
-    padding: 0 36px;
+    margin: 2.25rem;
+    padding: 0 2.25rem;
   }
 }
 .photogallery-content__image img {
@@ -263,12 +264,6 @@ ul, a, a:link, a:visited {
 }
 
 @media (min-width: 768px) {
-  .list__title, .page-subheader {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #fff;
-  }
   .header__list {
     display: flex;
     align-items: center;
@@ -278,20 +273,24 @@ ul, a, a:link, a:visited {
     display: flex;
     color: #fff;
   }
+  .photogallery-title {
+    margin: 2.25rem;
+    color: #323232;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "AvenirNextDemi";
+  }
   .photogallery-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 36px;
+    grid-gap: 2.25rem;
     flex-wrap: wrap;
-    margin: 36px;
-  }
-  .photogallery-title {
-    margin: 36px;
+    margin: 2.25rem;
   }
 }
 .footer-content {
   background-color: #323232;
-  padding: 16px;
+  padding: 1rem;
 }
 .footer-content__header .list__title {
   font-size: 24px;
@@ -305,7 +304,7 @@ ul, a, a:link, a:visited {
   justify-content: flex-start;
 }
 .footer-content__header .list__socials .icon {
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 .footer-content__header .no-mobile {
   display: none;
@@ -317,20 +316,23 @@ ul, a, a:link, a:visited {
   flex-wrap: wrap;
 }
 .footer-content__list .item {
-  padding: 16px 0;
+  padding: 1rem 0;
   color: #fff;
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 20px;
   font-weight: 400;
 }
-.footer-content .page-subheader {
-  font-size: 12px;
+.footer-content__list .item a {
+  color: #fff;
+}
+.footer-content__copyright {
+  font-size: 0.75rem;
   line-height: 20px;
   font-weight: 400;
   text-align: left;
   color: #fff;
 }
-.footer-content .page1-header {
+.footer-content .footer-content__logo {
   color: #fff;
 }
 
@@ -342,8 +344,8 @@ ul, a, a:link, a:visited {
     height: auto;
   }
   .footer-content {
-    padding: 0 36px;
-    padding-top: 48px;
+    padding: 0 2.25rem;
+    padding-top: 3rem;
   }
   .footer-content__header {
     display: flex;
@@ -362,10 +364,10 @@ ul, a, a:link, a:visited {
     font-weight: 400;
     color: #fff;
     font-family: "AvenirNextDemi";
-    margin-right: 108px;
+    margin-right: 6.75rem;
   }
   .footer-content__header .list__socials .icon {
-    padding: 0 16px;
+    padding: 0 1rem;
   }
   .footer-content__header .no-mobile {
     display: flex;
@@ -382,28 +384,26 @@ ul, a, a:link, a:visited {
   .footer-content__list .item {
     display: block;
     color: #fff;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 20px;
     align-items: center;
     width: 100%;
     flex-wrap: nowrap;
   }
   .footer-content__list .item__title {
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
     font-family: "AvenirNextDemi";
   }
   .footer-content__list .item__subtitle {
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
     font-family: "AvenirNext";
   }
-  .footer-content .page1-header {
+  .footer-content__logo {
     display: none;
   }
-  .footer-content .page-subheader {
-    padding-bottom: 36px;
-  }
-  .footer-content .page-subheader {
-    font-size: 12px;
+  .footer-content__copyright {
+    padding-bottom: 2.25rem;
+    font-size: 0.75rem;
     line-height: 20px;
     font-weight: 400;
     text-align: left;
@@ -411,6 +411,28 @@ ul, a, a:link, a:visited {
   }
 }
 @media (min-width: 1024px) {
+  .hero-content__title {
+    padding: 4.5rem;
+  }
+  .photogallery-content {
+    padding: 0 4.5rem;
+  }
+  .navbar-list__title, .about-content__title, .photogallery-title {
+    padding-left: 4.5rem;
+  }
+  .about-content__text {
+    margin: 0 4.5rem;
+  }
+  .about-content__image {
+    margin: 0 4.5rem;
+    padding: 0 4.5rem;
+  }
+  .photogallery-title {
+    font-family: "AvenirNextDemi";
+  }
+  .footer-content {
+    padding: 0 6.75rem;
+  }
   .footer-content__list {
     display: flex;
     flex-direction: row;

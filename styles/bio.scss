@@ -16,12 +16,13 @@ ul,a,a:link, a:visited{
     padding: 0;
     // color: #fff;
 }
+
 .navbar{
     text-align: center;
     width:100%;
     background-color: $navbar-color;
     display: inline-block;
-    padding-top: 24px;
+    padding-top: 1.5rem;
     &-list{
         display: flex;
         justify-content: space-between;
@@ -32,18 +33,16 @@ ul,a,a:link, a:visited{
             width: 50%;
             
         }
+        
         &__item hr{
-            border: 3px solid #fff;
+            border: 0.1875rem solid #fff;
             margin: 0;
         }
         &__title{
             display: flex;
             justify-content: center;
-        }
-        
+        }   
     }
-
-
 }
 
 @include tablet{
@@ -51,13 +50,13 @@ ul,a,a:link, a:visited{
         display: flex;
         justify-content: flex-start;
         margin-bottom: 0;
-        padding-top: 36px;
+        padding-top: 2.25rem;
         &-list{
             margin-bottom: 0;
             &__item{
                 display: flex;
                 justify-content: center;
-                padding:0 36px;
+                padding:0 2.25rem;
                 width: 33%;
             }
             &__title{
@@ -66,38 +65,12 @@ ul,a,a:link, a:visited{
                 align-content: center;
                 flex-wrap: wrap;
                 // width:30%;
-                margin: 0 36px;
+                margin: 0 2.25rem;
             }
         }
     }    
 }
 
-// @include tablet{
-//     .navbar-list{
-//         display: flex;
-//         justify-content: flex-start;
-//         padding-top: 0;
-//         margin: 0;
-//     }
-//     .navbar{
-    
-//         display: flex;
-//         // justify-content: space-between;
-//         // position: fixed; 
-//     // width: 100%;
-//     //     text-align: left;
-//     //     display: flex;
-//     //     justify-content: flex-start;
-// // }
-// @include tablet_{
-//     .navbar-list__title{
-//         display: flex;
-//         justify-content: flex-start;
-//         margin:0;
-//     }
-// }
-    
-// }
 .page{
     &-header{
     font-size: $mobile-section-header--size;
@@ -109,13 +82,6 @@ ul,a,a:link, a:visited{
     margin-bottom: 0;
 }}
 
-.hero{&-content{&__title{
-    font-size: $mobile-page-header--size;
-    line-height:$mobile-page-header--lineheight;
-    font-weight: $mobile-page-header--textweight;
-    color: $navbar-text;
-    font-family:"AvenirNextBold",sans-serif;
-}}}
 
 .section{
     &-header{
@@ -125,11 +91,46 @@ ul,a,a:link, a:visited{
     color: $navbar-text;
     font-family:"AvenirNextBold",sans-serif;
 }}
+
+
+.hero{
+    &-content{
+        display: flex;
+        position: relative;
+        text-align: left;
+        background-color: rgba(0, 0, 0,1);
+        margin-top: 0;
+        padding-top: 0;
+        &__title{
+            font-size: $mobile-page-header--size;
+            line-height:$mobile-page-header--lineheight;
+            font-weight: $mobile-page-header--textweight;
+            color: $navbar-text;
+            font-family:"AvenirNextBold",sans-serif;
+
+            position: absolute;
+            display: flex;
+            align-self: center;
+            // top: 50%;
+            color: $navbar-text;
+            margin-left: 1rem;
+        }
+    }
+
+    &-image img{
+            display: flex;
+            width: 100%;
+            height: auto;
+            opacity: 0.5;
+            object-position:center;
+    }
+
+
+}
 @include tablet{
     .page{&-header{
         font-size: $desktop-section-header--size;
         line-height:$desktop-section-header--lineheight;
-        // font-weight: $desktop-section-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNext",sans-serif;
         margin-top: 0;
@@ -139,7 +140,6 @@ ul,a,a:link, a:visited{
     .section{&-header{
         font-size: $desktop-sub-header--size;
         line-height:$desktop-sub-header--lineheight;
-        // font-weight: $desktop-sub-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextDemi",sans-serif;
     }}
@@ -148,7 +148,6 @@ ul,a,a:link, a:visited{
             &__title{
         font-size: $desktop-page-header--size;
         line-height:$desktop-page-header--lineheight;
-        // font-weight: $desktop-page-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextBold",sans-serif;
     }}}
@@ -160,47 +159,20 @@ ul,a,a:link, a:visited{
     width: 100%;
     height: auto;
 }
-.hero{
-    &-content{
-    display: flex;
-    position: relative;
-    text-align: left;
-    background-color: rgba(0, 0, 0,1);
-    margin-top: 0;
-    padding-top: 0;
-    &__title{
-        position: absolute;
-    display: flex;
-    align-self: center;
-    // top: 50%;
-    color: $navbar-text;
-    margin-left: 16px;
-    } 
-    }
 
-    &-image img{
-        display: flex;
-    width: 100%;
-    height: auto;
-    opacity: 0.5;
-    object-position:center;
-    }
-
-}
 
 @include tablet{
     .photogallery-content{
-        margin: 36px;
+        margin: 2.25rem;
     }
 }
 .about{
     &-content{
-        margin: 0 16px;
+        padding: 0 1rem;
         &__title{
             font-size: $mobile-section-header--size;
             line-height:$mobile-section-header--lineheight;
-            // font-weight: $desktop-section-header--textweight;
-            margin-top: 24px;
+            margin-top: 1.5rem;
             color:$navbar-color;
             font-family:'AvenirNextDemi';
         }
@@ -219,7 +191,7 @@ ul,a,a:link, a:visited{
                 display: block;
             }
             .copy p{
-                padding-right: 36px;
+                padding-right: 2.25rem;
                 font-size: $mobile-bodycopy--size;
                 line-height:$mobile-bodycopy--lineheight;
                 font-weight: $mobile-bodycopy--textweight;
@@ -235,25 +207,24 @@ ul,a,a:link, a:visited{
 }
 }
 .photogallery-content{
-    margin: 16px;
+    margin: 1rem;
 }
 .photogallery-title{
-    margin: 16px;
+    margin: 1rem;
 }
 @include tablet {
     .hero-content__title{
-        margin-left: 36px;
+        margin-left: 2.25rem;
     }
     
     .about{
         &-content{
+            padding: 0 2.25rem;
             &__text{
-                padding: 0 36px;
-                // margin:36px;
+                margin: 0 2.25rem;
                 .copy{
                     display: flex;
                     flex-wrap: nowrap;
-                    // flex-direction: row;
                     text-align: left;
                     justify-content: space-between;
                 }
@@ -261,14 +232,16 @@ ul,a,a:link, a:visited{
                     font-size: $desktop-sub-header--size;
                     line-height:$desktop-sub-header--lineheight;
                     font-weight: $desktop-sub-header--textweight;
+                    color: $navbar-color;
                 }
                 .boldcopy{
                     font-size: $desktop-bodycopy--size;
                     line-height:$desktop-bodycopy--lineheight;
                     font-weight: 700;
+                    color: $navbar-color;
                 }
                 .copy p{
-                    padding-right: 36px;
+                    padding-right: 2.25rem;
                     font-size: $desktop-bodycopy--size;
                     line-height:$desktop-bodycopy--lineheight;
                     font-weight: $desktop-bodycopy--textweight;
@@ -277,14 +250,13 @@ ul,a,a:link, a:visited{
         &__title{
             font-size: $desktop-section-header--size;
             line-height:$desktop-section-header--lineheight;
-            margin:0 36px;
-            margin-top: 48px;
+            margin-top: 3rem;
             color:$navbar-color;
             font-family:'AvenirNextDemi';
         }
         &__image{
-            margin:36px;
-            padding: 0 36px;
+            margin:2.25rem;
+            padding: 0 2.25rem;
         }
 }
 }
@@ -294,8 +266,6 @@ ul,a,a:link, a:visited{
     width:100%;
     height: auto;
     object-fit: cover;
-    // margin:16px;
-    // padding: 16px;
     
 }
 .photogallery{
@@ -303,12 +273,6 @@ ul,a,a:link, a:visited{
     background-color: #FAFAFA;
 }
 @include tablet{
-    .list__title,.page-subheader{
-        font-size: $desktop-footercopy--size;
-        line-height:$desktop-footercopy--lineheight;
-        font-weight: $desktop-footercopy--textweight;
-        color: #fff;
-    }
     .header__list{
         display: flex;
         align-items: center;
@@ -319,35 +283,28 @@ ul,a,a:link, a:visited{
         color: #fff;
     }
     
-    .photogallery-content{
+    .photogallery{
+        &-title{
+            margin: 2.25rem;
+            color:$navbar-color;
+            font-size: $desktop-sub-header--size;
+                    line-height:$desktop-sub-header--lineheight;
+                    font-family: 'AvenirNextDemi';
+        }
+
+        &-content{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 36px;
-    // padding: 100px 0;
-    // margin: 0 auto;
-    // display: flex;
-    flex-wrap: wrap;
-    margin: 36px;
-    }
-    .photogallery-title{
-        margin: 36px;
+        grid-gap: 2.25rem;
+        flex-wrap: wrap;
+        margin: 2.25rem;
     }
 }
-
-// .footer{&-content{
-//     padding:16px;
-//     background-color: $navbar-color;
-//     display: inline-block;
-//     width: 100%;
-// }}
-// .list__socials{
-//     display: flex;
-//     justify-content: flex-start;
-// }
+}
 .footer{
     &-content{
         background-color: $navbar-color;
-        padding: 16px;
+        padding: 1rem;
         &__header{
             
             .list{
@@ -357,13 +314,12 @@ ul,a,a:link, a:visited{
                     font-weight: $desktop-footercopy--textweight;
                     color: #fff;
                     font-family: 'AvenirNextDemi';
-                    // margin-right: 108px;
                 }
                 &__socials{
                     display: flex;
                     justify-content: flex-start;
                     .icon{
-                        padding: 0 16px;
+                        padding: 0 1rem;
                 }
                 }
             }
@@ -377,21 +333,24 @@ ul,a,a:link, a:visited{
             flex-direction: column;
             flex-wrap: wrap;
             .item{
-                padding: 16px 0;
+                padding: 1rem 0;
                 color: #fff;
-                font-size: 10px;
+                font-size: 0.625rem;
                 line-height:$mobile-footercopy--lineheight;
                 font-weight: $mobile-footercopy--textweight;
             }
+            .item a{
+                color: #fff;
+            }
         }
-        .page-subheader{
-            font-size: 12px;
+        &__copyright{
+            font-size: 0.75rem;
             line-height:$desktop-footercopy--lineheight;
             font-weight: $desktop-footercopy--textweight;
             text-align: left;
             color: #fff;
         }
-        .page1-header{
+        .footer-content__logo{
             color:#fff;
         }
         
@@ -405,18 +364,17 @@ ul,a,a:link, a:visited{
         display: flex;
         width: 100%;
         height: auto;
-        // padding: 36px;
+        // padding: 2.25rem;
         
     &-content{
-        padding: 0 36px;
-        padding-top: 48px;
+        padding: 0 2.25rem;
+        padding-top: 3rem;
         &__header{
             display: flex;
             justify-content: space-between;
             align-items: center ;
             background-color: $navbar-color;
-            // margin:0 36px;
-                    // 
+            // margin:0 2.25rem;
             .list{
                 display: flex;
                 align-items: center;
@@ -428,12 +386,11 @@ ul,a,a:link, a:visited{
                     font-weight: $desktop-footercopy--textweight;
                     color: #fff;
                     font-family: 'AvenirNextDemi';
-                    margin-right: 108px;
+                    margin-right: 6.75rem;
                 }
                 &__socials{
-                    // margin-left: 80px;
                     .icon{
-                        padding: 0 16px;
+                        padding: 0 1rem;
                 }
                     
                 }
@@ -449,44 +406,35 @@ ul,a,a:link, a:visited{
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
-                // text-align: left;
                 flex-wrap: nowrap;
                 align-items: center;
                 background-color: $navbar-color;
-                // width: 100%;
-                // height: auto;
                 .item{
                     display: block;
-                    // text-align: left;
-                    // line-height: 2;
                     color: #fff;
-                    font-size: 12px;
+                    font-size: 0.75rem;
                     line-height:$desktop-footercopy--lineheight;
-                    // font-weight: $desktop-footercopy--textweight;
                     align-items: center;
                     width: 100%;
                     flex-wrap: nowrap;
-                    // margin: 0 36px;
                         &__title{
-                            margin-bottom:36px;
+                            margin-bottom:2.25rem;
                             font-family: 'AvenirNextDemi';
                         }
                         &__subtitle{
-                            margin-bottom:36px;
+                            margin-bottom:2.25rem;
                             font-family: 'AvenirNext';
 
                         }
                 }
             }
-            .page1{&-header{
+            &__logo{
                 display: none;
-            }}
-            
-            .page-subheader{
-                padding-bottom: 36px;
             }
-            .page-subheader{
-                font-size: 12px;
+            
+            &__copyright{
+                padding-bottom: 2.25rem;
+                font-size: 0.75rem;
                 line-height:$desktop-footercopy--lineheight;
                 font-weight: $desktop-footercopy--textweight;
                 text-align: left;
@@ -496,14 +444,42 @@ ul,a,a:link, a:visited{
 }
 }
 @include desktop{
-    .footer{&-content{&__list{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        text-align: left;
-        flex-wrap: nowrap;
-        align-items: center;
-        background-color: $navbar-color;
+    .hero-content__title{
+        padding: 4.5rem;
+    }
+    .photogallery-content{
+        padding: 0 4.5rem;
+    }
+    
+    .navbar-list__title,.about-content__title, .photogallery-title{
+        padding-left:4.5rem;
+    }
+    .about{
+        &-content{
+            &__text{
+                margin: 0 4.5rem;
+        }
+        
+        &__image{
+            margin:0 4.5rem;
+            padding: 0 4.5rem;
+        }
+}
+}
+    .photogallery-title{
+        font-family:'AvenirNextDemi';
+    }
+    .footer{
+        &-content{
+            padding: 0 6.75rem;
+            &__list{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                text-align: left;
+                flex-wrap: nowrap;
+                align-items: center;
+                background-color: $navbar-color;
     }
 }
 }
