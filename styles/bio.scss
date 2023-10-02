@@ -14,7 +14,6 @@ ul,a,a:link, a:visited{
     text-decoration: none;
     list-style-type: none;
     padding: 0;
-    // color: #fff;
 }
 
 .navbar{
@@ -64,7 +63,6 @@ ul,a,a:link, a:visited{
                 justify-content: flex-start;
                 align-content: center;
                 flex-wrap: wrap;
-                // width:30%;
                 margin: 0 2.25rem;
             }
         }
@@ -111,7 +109,6 @@ ul,a,a:link, a:visited{
             position: absolute;
             display: flex;
             align-self: center;
-            // top: 50%;
             color: $navbar-text;
             margin-left: 1rem;
         }
@@ -364,7 +361,6 @@ ul,a,a:link, a:visited{
         display: flex;
         width: 100%;
         height: auto;
-        // padding: 2.25rem;
         
     &-content{
         padding: 0 2.25rem;
@@ -374,7 +370,6 @@ ul,a,a:link, a:visited{
             justify-content: space-between;
             align-items: center ;
             background-color: $navbar-color;
-            // margin:0 2.25rem;
             .list{
                 display: flex;
                 align-items: center;
@@ -440,8 +435,8 @@ ul,a,a:link, a:visited{
                 text-align: left;
                 color: #fff;
             }
-}
-}
+        }
+    }
 }
 @include desktop{
     .hero-content__title{
@@ -464,7 +459,7 @@ ul,a,a:link, a:visited{
             margin:0 4.5rem;
             padding: 0 4.5rem;
         }
-}
+    }
 }
     .photogallery-title{
         font-family:'AvenirNextDemi';
@@ -480,7 +475,7 @@ ul,a,a:link, a:visited{
                 flex-wrap: nowrap;
                 align-items: center;
                 background-color: $navbar-color;
+            }
+        }
     }
-}
-}
 }
