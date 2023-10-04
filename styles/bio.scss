@@ -479,3 +479,9 @@ ul,a,a:link, a:visited{
         }
     }
 }
+
+.comments__single {
+    border: 1px red solid;
+    box-shadow: 0 0 6px 0 #000;
+    border-radius: 6px;
+  }
