@@ -1,4 +1,4 @@
-const comments = [
+const commentsArr = [
     {
         name:"Connor Walton",
         timeStamp:"02/17/2021",
@@ -16,10 +16,12 @@ const comments = [
     },
     
 ]
-for (let i=0;i<comments.length;i++){
-// const commentCard = document.createElement('div'),
+// const comments1 = document.createElement("section");
+const comments = document.createElement("div");
+comments.innerText = "";
+for (let i=0;i<commentsArr.length;i++){
 function displayComment(commentObj){
-    document.querySelector(".comments").innerText="";
+        console.log("hi")
         const commentCard = document.createElement("article");
         const commentHeader=document.createElement("div")
         const commentName = document.createElement("p");
@@ -37,33 +39,69 @@ function displayComment(commentObj){
         commentHeader.appendChild(commentName);
         commentHeader.appendChild(commentTime);
         commentCard.appendChild(commentHeader);
-        // commentCard.appendChild(commentTime);
         commentCard.appendChild(commentText);
-        document.querySelector(".comments").appendChild(commentCard);
-        //i think issue is function is inside loop
+        comments.appendChild(commentCard);
+        document.querySelector("main").appendChild(comments);
         
     }
-displayComment(comments[i])
+    
+displayComment(commentsArr[i]);
 }
 
+// const comments = [
+//     {
+//       title: "Great site!",
+//       content: "This is really an awesome site I am so proud of you!",
+//       profile_pic: "./patrick.jpg"
+//     },
+//     {
+//       title: "Awful site!",
+//       content: "This is really a terrible site I am so disgusted by you!",
+//       profile_pic: "./patrick.jpg"
+//     },
+//   ]
 
-function addComments() {
-    const loadingEl = document.querySelector(".comments__single");
-    // loadingEl.style.display = "none";
-    // document.querySelector(".comments").removeChild(loadingEl);
-    document.querySelector(".comments").innerText = "";
-    for(let i = 0; i < comments.length; i++) {
-      const commentCard = document.createElement("article");
-      const commentContent = document.createElement("p");
-      const commentTitle = document.createElement("h2");
-      const commentPic = document.createElement("img");
-      commentCard.classList.add("comments__single");
-      commentPic.setAttribute("src",comments[i].profile_pic);
-      commentTitle.innerText = comments[i].title;
-      commentContent.innerText = comments[i].content;
-      commentCard.appendChild(commentPic);
-      commentCard.appendChild(commentTitle);
-      commentCard.appendChild(commentContent);
-      document.querySelector(".comments").appendChild(commentCard);
-    }
-  }
+//   function addComments() {
+//     const loadingEl = document.querySelector(".comments__single");
+//     // loadingEl.style.display = "none";
+//     // document.querySelector(".comments").removeChild(loadingEl);
+//     document.querySelector(".comments").innerText = "";
+//     for(let i = 0; i < comments.length; i++) {
+//       const commentCard = document.createElement("article");
+//       const commentContent = document.createElement("p");
+//       const commentTitle = document.createElement("h2");
+//       const commentPic = document.createElement("img");
+//       commentCard.classList.add("comments__single");
+//       commentPic.setAttribute("src",comments[i].profile_pic);
+//       commentTitle.innerText = comments[i].title;
+//       commentContent.innerText = comments[i].content;
+//       commentCard.appendChild(commentPic);
+//       commentCard.appendChild(commentTitle);
+//       commentCard.appendChild(commentContent);
+//       document.querySelector(".comments").appendChild(commentCard);
+//     }
+//   }
+  
+
+
+
+// function addComments() {
+//     const loadingEl = document.querySelector(".comments__single");
+//     // loadingEl.style.display = "none";
+//     // document.querySelector(".comments").removeChild(loadingEl);
+//     document.querySelector(".comments").innerText = "";
+//     for(let i = 0; i < comments.length; i++) {
+//       const commentCard = document.createElement("article");
+//       const commentContent = document.createElement("p");
+//       const commentTitle = document.createElement("h2");
+//       const commentPic = document.createElement("img");
+//       commentCard.classList.add("comments__single");
+//       commentPic.setAttribute("src",comments[i].profile_pic);
+//       commentTitle.innerText = comments[i].title;
+//       commentContent.innerText = comments[i].content;
+//       commentCard.appendChild(commentPic);
+//       commentCard.appendChild(commentTitle);
+//       commentCard.appendChild(commentContent);
+//       document.querySelector(".comments").appendChild(commentCard);
+//     }
+//   }
