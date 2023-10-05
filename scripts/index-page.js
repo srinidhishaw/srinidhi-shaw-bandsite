@@ -1,3 +1,5 @@
+
+
 const commentsArr = [
     {
         name:"Connor Walton",
@@ -27,6 +29,8 @@ function displayComment(commentObj){
         const commentName = document.createElement("p");
         const commentTime = document.createElement("p");
         const commentText = document.createElement("p");
+        const commentImg = document.createElement("img");
+        //add image
         commentName.innerText = commentObj.name;
         commentTime.innerText = commentObj.timeStamp;
         commentText.innerText = commentObj.comment;
