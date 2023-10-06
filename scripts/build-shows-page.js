@@ -47,7 +47,7 @@ for (let i=0;i<showsArr.length;i++){
             console.log("hi")
             //definitions
             const showCard = document.createElement("article");
-            showCard.setAttribute('id','show-card');
+            // showCard.setAttribute('id','show-card');
             const showHeader=document.createElement("div")
             var showDate = document.createElement("p");
             const showVenue = document.createElement("p");
@@ -73,21 +73,94 @@ for (let i=0;i<showsArr.length;i++){
             showCard.appendChild(showHeader);
             showCard.appendChild(showButton);
             shows.appendChild(showCard);
-            document.querySelector("main").appendChild(showCard);
+            document.querySelector("main").appendChild(shows);
+            // document.querySelector("main").appendChild(showCard);
+            showCard.classList.add("show-card");
             
         }
     
 displayShows(showsArr[i]);
 }
-
+console.log("show-card");
 const x = document.querySelectorAll("article");
+i=0;
+let prevC={};
 x.forEach((c) => {
-    
+    let solid = false;
+
+        
+    // c.addEventListener('mouseover', function() {
+    //     // if (solid!==true){
+    //         c.classList.toggle('hover');
+    //     // }        
+    // });
     c.addEventListener("click", (e) => {
-        x.forEach((d)=>{
-            d.style.backgroundColor='white';
-            });
-        console.log(e.currentTarget.id)
-        c.style.backgroundColor='#E1E1E1';
+        if (i>0){
+            console.log(prevC);
+            prevC.classList.remove('active-state');
+            
+        }
+        // prevC.addEventListener('mouseover', function() {
+        //     prevC.style.backgroundColor = '#FAFAFA'; // Change to your hover color
+        // });
+        
+        // c.classList.remove('highlighted');
+        // c.addEventListener('mouseover', function() {
+        //             c.style.backgroundColor = '#FAFAFA'; // New color on hover
+        //         });
+        // x.forEach((d)=>{
+        //     d.classList.toggle='show-card';
+            
+        //     // d.styleSheets[0].addRule('#elid:hover', 'background-color: red', 0);
+        //     });
+       
+        solid = true;
+        prevC = Object.assign(c);
+        // console.log(c);
+        // console.log(prevC);  
+        c.classList.toggle("active-state");
+        
+        i++;
+        
+        // this.classList.remove('hover');
+        // c.classList.toggle('highlighted');
+        //hover and click 
     });
+    
+        // c.addEventListener('mouseover', function() {
+        //     if(solid===false){
+        //     c.classList.toggle("hover-state");
+        // }
+        // });
+    
+    
+
+    // c.addEventListener('mouseout', function() {
+        
+    //     this.classList.remove('hover');
+    // });
+    
+    
 });
+
+
+// x.forEach((c) => {
+//     c.addEventListener('mouseover', function() {
+//         c.style.backgroundColor = '#FAFAFA'; // New color on hover
+//     });
+    
+    // c.addEventListener("click", (e) => {
+    //     x.forEach((d)=>{
+    //         d.style.backgroundColor='white';
+            
+    //         // d.styleSheets[0].addRule('#elid:hover', 'background-color: red', 0);
+    //         });
+    //     console.log(e.currentTarget.id)
+    //     c.style.backgroundColor='#E1E1E1';
+        
+    // });
+    
+    
+// });
+
+

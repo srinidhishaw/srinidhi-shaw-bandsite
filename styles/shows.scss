@@ -1,3 +1,7 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/fonts' as *;
+
 .article:hover{
     background-color: aqua;
 }
@@ -47,4 +51,24 @@
     }
 
 
+}
+.show-card{
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.highlighted{
+    background-color: blue;
+}
+.show-card:hover{
+    background-color: #FAFAFA;
+}
+.hover-state{
+    background-color: #FAFAFA;
+}
+.active-state{
+    background-color: #E1E1E1 !important;
+}
+.inactive-state{
+    background-color: #fff;
 }
