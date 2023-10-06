@@ -88,6 +88,6 @@ x.forEach((c) => {
             d.style.backgroundColor='white';
             });
         console.log(e.currentTarget.id)
-        c.style.backgroundColor='black';
+        c.style.backgroundColor='#E1E1E1';
     });
 });

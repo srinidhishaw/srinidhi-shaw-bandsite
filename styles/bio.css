@@ -117,6 +117,18 @@ ul, a, a:link, a:visited {
   color: #fff;
   margin-left: 1rem;
 }
+.hero-content__subtitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "AvenirNextBold", sans-serif;
+  position: absolute;
+  display: flex;
+  align-self: center;
+  color: #fff;
+  margin-left: 1rem;
+}
 .hero-image img {
   display: flex;
   width: 100%;
@@ -442,4 +454,26 @@ ul, a, a:link, a:visited {
     align-items: center;
     background-color: #323232;
   }
+}
+.input {
+  width: 100%;
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid #000;
+  border-radius: 100%;
+}
+
+.comment-img img {
+  width: 100px;
+  height: 100px;
+  filter: grayscale(100%);
+  border-radius: 50%;
+}
+
+.comment-name {
+  background-color: #FAFAFA;
+}
+
+.comment-card:hover {
+  background-color: aqua;
 }/*# sourceMappingURL=bio.css.map */

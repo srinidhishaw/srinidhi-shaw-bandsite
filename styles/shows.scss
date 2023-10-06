@@ -1,0 +1,50 @@
+.article:hover{
+    background-color: aqua;
+}
+
+.hero{
+    &-content{
+        display: flex;
+        position: relative;
+        text-align: left;
+        background-color: rgba(0, 0, 0,1);
+        margin-top: 0;
+        padding-top: 0;
+        &__title{
+            font-size: $mobile-page-header--size;
+            line-height:$mobile-page-header--lineheight;
+            font-weight: $mobile-page-header--textweight;
+            color: $navbar-text;
+            font-family:"AvenirNextBold",sans-serif;
+
+            position: absolute;
+            display: flex;
+            align-self: center;
+            color: $navbar-text;
+            margin-left: 1rem;
+        }
+        &__subtitle{
+            font-size: $mobile-page-header--size;
+            line-height:$mobile-page-header--lineheight;
+            font-weight: $mobile-page-header--textweight;
+            color: $navbar-text;
+            font-family:"AvenirNextBold",sans-serif;
+
+            position: absolute;
+            display: flex;
+            align-self: center;
+            color: $navbar-text;
+            margin-left: 1rem;
+        }
+    }
+
+    &-image img{
+            display: flex;
+            width: 100%;
+            height: auto;
+            opacity: 0.5;
+            object-position:center;
+    }
+
+
+}

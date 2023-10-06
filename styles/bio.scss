@@ -112,6 +112,19 @@ ul,a,a:link, a:visited{
             color: $navbar-text;
             margin-left: 1rem;
         }
+        &__subtitle{
+            font-size: $mobile-page-header--size;
+            line-height:$mobile-page-header--lineheight;
+            font-weight: $mobile-page-header--textweight;
+            color: $navbar-text;
+            font-family:"AvenirNextBold",sans-serif;
+
+            position: absolute;
+            display: flex;
+            align-self: center;
+            color: $navbar-text;
+            margin-left: 1rem;
+        }
     }
 
     &-image img{
@@ -479,9 +492,22 @@ ul,a,a:link, a:visited{
         }
     }
 }
-
-.comments__single {
-    border: 1px red solid;
-    box-shadow: 0 0 6px 0 #000;
-    border-radius: 6px;
-  }
+.input {
+    width: 100%;
+    padding: 16px;
+    margin:16px;
+    border: 1px solid #000;
+    border-radius: 100%
+}
+.comment-img img{
+    width:100px;
+    height:100px;
+    filter:grayscale(100%);
+    border-radius: 50%;
+}
+.comment-name{
+    background-color: #FAFAFA;
+}
+.comment-card:hover{
+    background-color: aqua;
+}
