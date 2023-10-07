@@ -32,6 +32,14 @@ const showsArr = [
 const titleArr = [
     "Date: ", "Venue: ", "Location: "
 ]
+// titleArr.forEach((b)=>{
+//     console.log(b);
+//     b.classList.add("title-array");
+
+// }
+
+// );
+// titleArr.classList.add("title-array");
 const shows = document.createElement("div");
 shows.setAttribute('id',"shows");
 const showCardTitle = document.createElement("h2");
@@ -49,28 +57,59 @@ for (let i=0;i<showsArr.length;i++){
             const showCard = document.createElement("article");
             // showCard.setAttribute('id','show-card');
             const showHeader=document.createElement("div")
+            // const showHeader2=document.createElement("div")
+            // const showHeader3=document.createElement("div")
             var showDate = document.createElement("p");
+            const showHeaderDate = document.createElement("div");
+            const showHeaderVenue = document.createElement("div");
+            const showHeaderLoc = document.createElement("div");
             const showVenue = document.createElement("p");
             const showLocation = document.createElement("p");
             const showButton = document.createElement("button")
             //assign text
+            showHeaderDate.innerText=titleArr[0];
+            console.log(showHeaderDate)
+            showHeaderDate.classList.add("title-array");
+            showHeaderVenue.innerText=titleArr[1];
+            showHeaderVenue.classList.add("title-array");
+            showHeaderLoc.innerText=titleArr[2];
+            showHeaderLoc.classList.add("title-array");
+            showButton.classList.add("button")
             
-            showDate.innerText+="Date:\n"+showObj.date;
+            // showHeader2.appendChild(showHeaderDate)
+            // showHeader2.appendChild(showDate)
+            // showHeader2.appendChild(showHeaderVenue)
+            // showHeader2.appendChild(showHeaderVenue)
+            // console.log(showHeader2)
+            // showHeader2.classList.add("show-header2")
+
+            
+            // showHeader3.appendChild(showVenue)
+            // showHeader3.appendChild(showLocation)
+            
+            // showHeaders.classList.add("title-array");
+            showHeaderDate.textContent
+            showDate.innerText=showObj.date;
             // showDate.appendChild(showObj.date);
-            showVenue.innerText += "Venue:\n"+ showObj.venue;
-            showLocation.innerText += "Location:\n"+showObj.location;
+            showVenue.innerText = showObj.venue;
+            showLocation.innerText = showObj.location;
             showButton.innerText = "BUY TICKETS";
-            showDate.style.fontSize='$mobile-bodycopy--size' ;
-            showDate.style.fontFamily='AvenirNextBold';
-            showDate.style.color='$navbar-color';
-            showCard.style.display='block';
-            showHeader.style.display='block';
-            // showHeader.style.justifyContent="space-between";
+            showDate.style.fontWeight='700' ;
+            showVenue.style.fontWeight='400';
+            // showDate.style.color='$navbar-color';
+            showHeader.classList.add("show-header");
             
+            // showHeader3.classList.add("show-header3")
+            // showHeader.style.justifyContent="space-between";
+            showHeader.appendChild(showHeaderDate);
             showHeader.appendChild(showDate);
+            showHeader.appendChild(showHeaderVenue);
             showHeader.appendChild(showVenue);
+            showHeader.appendChild(showHeaderLoc);
             showHeader.appendChild(showLocation);
             showCard.appendChild(showHeader);
+            // showCard.appendChild(showHeader2)
+            // showCard.appendChild(showHeader3)
             showCard.appendChild(showButton);
             shows.appendChild(showCard);
             document.querySelector("main").appendChild(shows);
@@ -88,79 +127,23 @@ let prevC={};
 x.forEach((c) => {
     let solid = false;
 
-        
-    // c.addEventListener('mouseover', function() {
-    //     // if (solid!==true){
-    //         c.classList.toggle('hover');
-    //     // }        
-    // });
     c.addEventListener("click", (e) => {
         if (i>0){
             console.log(prevC);
             prevC.classList.remove('active-state');
             
         }
-        // prevC.addEventListener('mouseover', function() {
-        //     prevC.style.backgroundColor = '#FAFAFA'; // Change to your hover color
-        // });
         
-        // c.classList.remove('highlighted');
-        // c.addEventListener('mouseover', function() {
-        //             c.style.backgroundColor = '#FAFAFA'; // New color on hover
-        //         });
-        // x.forEach((d)=>{
-        //     d.classList.toggle='show-card';
-            
-        //     // d.styleSheets[0].addRule('#elid:hover', 'background-color: red', 0);
-        //     });
        
         solid = true;
-        prevC = Object.assign(c);
-        // console.log(c);
-        // console.log(prevC);  
+        prevC = Object.assign(c);  
         c.classList.toggle("active-state");
         
         i++;
         
-        // this.classList.remove('hover');
-        // c.classList.toggle('highlighted');
-        //hover and click 
+        
     });
-    
-        // c.addEventListener('mouseover', function() {
-        //     if(solid===false){
-        //     c.classList.toggle("hover-state");
-        // }
-        // });
-    
-    
-
-    // c.addEventListener('mouseout', function() {
-        
-    //     this.classList.remove('hover');
-    // });
-    
-    
+     
 });
-
-
-// x.forEach((c) => {
-//     c.addEventListener('mouseover', function() {
-//         c.style.backgroundColor = '#FAFAFA'; // New color on hover
-//     });
-    
-    // c.addEventListener("click", (e) => {
-    //     x.forEach((d)=>{
-    //         d.style.backgroundColor='white';
-            
-    //         // d.styleSheets[0].addRule('#elid:hover', 'background-color: red', 0);
-    //         });
-    //     console.log(e.currentTarget.id)
-    //     c.style.backgroundColor='#E1E1E1';
-        
-    // });
-    
-    
-// });
 
 

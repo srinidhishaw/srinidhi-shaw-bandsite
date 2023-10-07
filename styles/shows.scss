@@ -55,13 +55,19 @@
 .show-card{
     background-color: #fff;
     transition: background-color 0.3s;
+
+    font-size: $mobile-bodycopy--size;
+    font-family: "AvenirNext";
+
+    border-bottom: 2px solid #E1E1E1;
+    display:block;
 }
 
-.highlighted{
-    background-color: blue;
-}
 .show-card:hover{
     background-color: #FAFAFA;
+}
+.show-header{
+    display: block;
 }
 .hover-state{
     background-color: #FAFAFA;
@@ -71,4 +77,55 @@
 }
 .inactive-state{
     background-color: #fff;
+}
+.title-array{
+    color:#AFAFAF;
+    font-size: $mobile-sub-header--size;
+}
+
+.button{
+    background-color: $navbar-color;
+    color:#E1E1E1;
+    border-radius: 6px;
+    border:0px;
+    padding: 36px;
+    width: 100%;
+    height: auto;
+    margin:36px
+}
+.button:hover{
+    background-color: #000000;
+}
+
+
+@include tablet{
+    .show-card{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .show-header{
+        display: none;
+    }
+//add title headers
+    .show-header{
+        width:100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size:$desktop-sub-header--size;
+        margin:36px;
+        // flex-wrap: nowrap
+        
+    }
+    .button{
+        width: 25vw;
+        font-size:$desktop-sub-header--size;
+        font-weight: 700;
+        font-family: "AvenirNext";
+    }
+    .title-array{
+        display: none;
+    }
 }
