@@ -31,12 +31,22 @@ ul,a,a:link, a:visited{
             text-align: center;
             width: 50%;
             
+            
+        }
+        #bio,#shows:hover{
+            border-bottom: 5px solid #fff;
+
+            
+        }
+        #shows{
+            color:#AFAFAF;
         }
         
-        &__item hr{
-            border: 0.1875rem solid #fff;
-            margin: 0;
-        }
+        
+        // &__item hr{
+        //     border: 0.1875rem solid #fff;
+        //     margin: 0;
+        // }
         &__title{
             display: flex;
             justify-content: center;

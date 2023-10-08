@@ -46,9 +46,11 @@ ul, a, a:link, a:visited {
   text-align: center;
   width: 50%;
 }
-.navbar-list__item hr {
-  border: 0.1875rem solid #fff;
-  margin: 0;
+.navbar-list #bio, .navbar-list #shows:hover {
+  border-bottom: 5px solid #fff;
+}
+.navbar-list #shows {
+  color: #AFAFAF;
 }
 .navbar-list__title {
   display: flex;

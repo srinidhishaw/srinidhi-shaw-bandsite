@@ -1,4 +1,5 @@
 // const heroSub = document.querySelector("hero-content__subtitle");
+
 const showsArr = [
     {
         date:"Mon Sept 06 2021",
@@ -32,17 +33,7 @@ const showsArr = [
 const titleArr = {
     date:"Date: ", venue:"Venue: ", location:"Location: "
 }
-// const titleArr2 = {
-//     date:"Date: ", venue:"Venue: ", location:"Location: "
-// }
-// titleArr.forEach((b)=>{
-//     console.log(b);
-//     b.classList.add("title-array");
 
-// }
-
-// );
-// titleArr.classList.add("title-array");
 const shows = document.createElement("div");
 shows.setAttribute('id',"shows");
 const showCardTitle = document.createElement("h2");
