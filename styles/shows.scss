@@ -96,6 +96,9 @@
 .button:hover{
     background-color: #000000;
 }
+.show-header2{
+    display: none;
+}
 
 
 @include tablet{
@@ -105,10 +108,16 @@
 
     }
     .show-header{
+        // display: none;
+    }
+    .showcard-title{
+
+    }
+    .showcard-title2{
         display: none;
     }
 //add title headers
-    .show-header{
+    .show-header,.show-header2{
         width:100vw;
         display: flex;
         flex-direction: row;
@@ -125,7 +134,35 @@
         font-weight: 700;
         font-family: "AvenirNext";
     }
-    .title-array{
+    .title-array2{
         display: none;
     }
+    // .showcard-title
+}
+
+@include desktop{
+    .shows{
+
+        display: flex;
+        flex-direction: row;
+    }
+    .showcard-title2{
+        width:100%;
+        display: flex;
+        
+    }
+    .showcard-title{
+        display: none;
+    }
+    .show-card{
+        margin-left: 25vw
+    }
+    .show-header2{
+        width:100%;
+        text-align: left;
+    }
+    .title-array2{
+        display: none;
+    }
+
 }
