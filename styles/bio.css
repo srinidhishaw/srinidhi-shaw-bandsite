@@ -462,20 +462,71 @@ ul, a, a:link, a:visited {
   padding: 16px;
   margin: 16px;
   border: 1px solid #000;
-  border-radius: 100%;
-}
-
-.comment-img img {
-  width: 100px;
-  height: 100px;
-  filter: grayscale(100%);
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .comment-name {
   background-color: #FAFAFA;
 }
 
-.comment-card:hover {
-  background-color: aqua;
+.comment-card {
+  border-bottom: 3px solid #E1E1E1;
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-button {
+  background-color: #323232;
+  color: #E1E1E1;
+  border-radius: 6px;
+  border: 0px;
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  margin: 36px;
+}
+
+.input-button:hover {
+  background-color: #000000;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 16px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+}
+
+.user-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 16px;
+}
+
+.comment-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 16px;
+  display: flex;
+  align-self: start;
+  flex-shrink: 0;
+}
+
+.header-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.extra-div {
+  display: flex;
 }/*# sourceMappingURL=bio.css.map */
