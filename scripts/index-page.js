@@ -21,9 +21,11 @@ const titleArr = {
 }
 const comments = document.createElement("section");
 
+const formContainer = document.createElement("section");
+
 const getStartedTitle = document.createElement('h1');
 getStartedTitle.innerText="Join the Conversation";
-document.querySelector("main").appendChild(getStartedTitle);
+
 getStartedTitle.classList.add("getstarted-title");
 const commentForm = document.createElement('form');
 const userImg = document.createElement("img");
@@ -52,7 +54,7 @@ inputCom.classList.add("input")
 inputCom.placeholder = "Add a new comment";
 inputCom.style.height="100px";
 inputButton.type = "submit";
-inputButton.value = "Comment";
+inputButton.value = "COMMENT";
 inputButton.classList.add("input-button");
 commentForm.appendChild(userImg);
 card.appendChild(titleName)
@@ -62,8 +64,11 @@ card.appendChild(inputCom);
 card.appendChild(inputButton);
 
 commentForm.appendChild(card);
-document.querySelector("main").appendChild(commentForm);
+formContainer.appendChild(commentForm);
+document.querySelector("main").appendChild(getStartedTitle);
+document.querySelector("main").appendChild(formContainer);
 commentForm.classList.add("comment-form");
+formContainer.classList.add("form-container");
 const submissionsArray = [];
 
 commentForm.addEventListener("submit", function (event) {
@@ -124,7 +129,7 @@ function displayComment(commentObj){
 
         commentName.style.fontSize='$mobile-bodycopy--size' ;
         commentName.style.fontFamily='AvenirNextBold';
-        
+        commentName.style.color='$navbarcolor';
         commentCard.appendChild(colorPlaceholder);
         commentHeader1.appendChild(commentName);
         commentHeader1.appendChild(commentTime);

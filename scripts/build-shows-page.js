@@ -1,5 +1,3 @@
-// const heroSub = document.querySelector("hero-content__subtitle");
-
 const showsArr = [
     {
         date:"Mon Sept 06 2021",
@@ -47,9 +45,7 @@ showCardTitle2.innerText="Shows";
         showCardTitle2.classList.add("showcard-title2")
         showCardTitle.classList.add("showcard-title")
 shows.innerText = "";
-// document.querySelector("main").showCardTitle;
 showsContainer.appendChild(showCardTitle)
-// const showCardList = document.createElement("div")
 
 const showHeader2=document.createElement("div")
 const showHeaderDate = document.createElement("p");
@@ -64,16 +60,14 @@ showsContainer.classList.add("shows-container");
 showsContainer.appendChild(showHeader2);
 
 
-            showHeader2.classList.add("show-header2")
+showHeader2.classList.add("show-header2")
 for (let i=0;i<showsArr.length;i++){
     function displayShows(showObj){
             console.log("hi")
             //definitions
             const showCard = document.createElement("article");
-            // showCard.setAttribute('id','show-card');
             const showHeader=document.createElement("div")
             
-            // const showHeader3=document.createElement("div")
             var showDate = document.createElement("p");
            
             const showVenue = document.createElement("p");
@@ -81,7 +75,6 @@ for (let i=0;i<showsArr.length;i++){
             const showButton = document.createElement("button")
             //assign text
             showHeaderDate.innerText=titleArr.date;
-            // console.log(showHeaderDate)
             showHeaderDate.classList.add("title-array");
             showHeaderVenue.innerText=titleArr.venue;
             showHeaderVenue.classList.add("title-array");
@@ -93,13 +86,11 @@ for (let i=0;i<showsArr.length;i++){
         
             showHeaderDate.textContent
             showDate.innerText=showObj.date;
-            // showDate.appendChild(showObj.date);
             showVenue.innerText = showObj.venue;
             showLocation.innerText = showObj.location;
             showButton.innerText = "BUY TICKETS";
             showDate.style.fontWeight='700' ;
             showVenue.style.fontWeight='400';
-            // showDate.style.color='$navbar-color';
             showHeader.classList.add("show-header");
             const showHeaderDate2 = document.createElement("p");
             const showHeaderVenue2 = document.createElement("p");

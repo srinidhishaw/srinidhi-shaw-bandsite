@@ -38,13 +38,6 @@ ul,a,a:link, a:visited{
             
             
         }
-    
-        
-        
-        // &__item hr{
-        //     border: 0.1875rem solid #fff;
-        //     margin: 0;
-        // }
         &__title{
             display: flex;
             justify-content: center;
@@ -94,7 +87,7 @@ ul,a,a:link, a:visited{
     font-size: $mobile-sub-header--size;
     line-height:$mobile-sub-header--lineheight;
     font-weight: $mobile-sub-header--textweight;
-    color: $navbar-text;
+    color: #AFAFAF;
     font-family:"AvenirNextBold",sans-serif;
 }}
 
@@ -180,6 +173,7 @@ ul,a,a:link, a:visited{
                 margin:36px;
             }
             &__title{
+                margin-top: 0;
         font-size: $desktop-page-header--size;
         line-height:$desktop-page-header--lineheight;
         color: $navbar-text;
@@ -191,13 +185,9 @@ ul,a,a:link, a:visited{
         font-weight: $desktop-page-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextBold",sans-serif;
-        margin:36px;
+        margin:0 36px;
 
-        // position: absolute;
-        // display: flex;
-        // align-self: center;
-        // color: $navbar-text;
-        // margin-left: 1rem;
+        
     }}}
 }
 .hero,.about,.photogallery{
@@ -490,46 +480,35 @@ ul,a,a:link, a:visited{
     }
 }
 @include desktop{
-    .titles{
-        display: flex;
-        flex-direction: row;
-    }
+    
+    
     .hero-content{
         .titles{
             position: absolute;
             display: flex;
-            flex-direction: row;
-            // flex-wrap:wrap;
-            // justify-content: center;
+            flex-direction: row;            
             width: 100%;
-            // align-content:center;
-            align-items: center;
-            // text-align: left;
-            // color: $navbar-text;
-            margin: 36px;
+            align-items: flex-end;
+            top:25%;
 
         }
         &__title{
         padding: 0 4.5rem;
+        width: 70%;
+        // margin-right:100px;
     }
     &__subtitle{
-        font-size: $desktop-sub-header--size;
+        font-size: $desktop-section-header--size;
         line-height:$desktop-page-header--lineheight;
         font-weight: $desktop-page-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextBold",sans-serif;
         padding: 0 4.5rem;
 
-        // position: absolute;
-        // display: flex;
-        // align-self: center;
-        // color: $navbar-text;
-        // margin-left: 1rem;
     }
     &__soundcloud{
-        width:100%;
-        margin: 36px;
-        height:166px; 
+        width:50%;
+        padding: 36px;
 
     }
 }
@@ -595,60 +574,24 @@ ul,a,a:link, a:visited{
 }
 #shows,#bio:hover{
     border-bottom: 5px solid #fff;
+    
+        .section-header{
+            color:#fff;
+        }
 
     
 }
 #bio{
-    color:#AFAFAF;
+    .section-header{
+        color:#AFAFAF;
+    }
+    
 }
 
-// .hero{
-//     &-content{
-//         display: flex;
-//         position: relative;
-//         text-align: left;
-//         background-color: rgba(0, 0, 0,1);
-//         margin-top: 0;
-//         padding-top: 0;
-//         &__title{
-//             font-size: $mobile-page-header--size;
-//             line-height:$mobile-page-header--lineheight;
-//             font-weight: $mobile-page-header--textweight;
-//             color: $navbar-text;
-//             font-family:"AvenirNextBold",sans-serif;
 
-//             position: absolute;
-//             display: flex;
-//             align-self: center;
-//             color: $navbar-text;
-//             margin-left: 1rem;
-//         }
-//         &__subtitle{
-//             font-size: $mobile-page-header--size;
-//             line-height:$mobile-page-header--lineheight;
-//             font-weight: $mobile-page-header--textweight;
-//             color: $navbar-text;
-//             font-family:"AvenirNextBold",sans-serif;
-
-//             position: absolute;
-//             display: flex;
-//             align-self: center;
-//             color: $navbar-text;
-//             margin-left: 1rem;
-//         }
-//     }
-
-//     &-image img{
-//             display: flex;
-//             width: 100%;
-//             height: auto;
-//             opacity: 0.5;
-//             object-position:center;
-//     }
-
-
-// }
-
+.showcard-title{
+    margin: 16px;
+}
 .shows-container{
     width: 100%;
     display: block;
@@ -716,8 +659,9 @@ ul,a,a:link, a:visited{
         // display: none;
     }
     .showcard-title{
-        font-size:$desktop-section-header--size;
-        margin: 36px;
+        font-size:$desktop-page-header--size;
+        margin: 24px 18px;
+        color: $navbar-color;
     }
     .showcard-title2{
         display: none;
@@ -725,17 +669,17 @@ ul,a,a:link, a:visited{
 //add title headers
 .title-array{
     width: 30vw;
-    // margin-right: 36px;
+    margin-bottom: 0;
+    font-size:$desktop-sub-header--size;
 }
 .show-header2{
     width:75vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    // text-align: left;
-    // justify-content: flex-start;
-    font-size:$desktop-bodycopy--size;
-    margin:36px;
+    
+    font-size:$desktop-sub-header--size;
+    margin:24px 18px;
 }
     .show-header{
         width:100%;
@@ -743,10 +687,9 @@ ul,a,a:link, a:visited{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        font-size:$desktop-bodycopy--size;
-        margin:36px;
-        // width: 100vw;
-        // flex-wrap: nowrap;
+        font-size:$desktop-sub-header--size;
+        margin:24px 18px;
+        
         
     }
     .button{
@@ -763,7 +706,6 @@ ul,a,a:link, a:visited{
     .title-array2{
         display: none;
     }
-    // .showcard-title
 }
 
 @include desktop{
@@ -774,9 +716,14 @@ ul,a,a:link, a:visited{
     }
     .showcard-title2{
         width:100%;
-        font-size:$desktop-section-header--size;
+        font-size:$desktop-page-header--size;
         display: flex;
-        margin-right: 10vw;
+        margin-left:24px;
+        margin-right:7vw;
+        padding: 24px 18px;
+        color:$navbar-color;
+        
+
         
     }
     .showcard-title{
@@ -789,9 +736,7 @@ ul,a,a:link, a:visited{
     .show-header2{
         width:75vw;
         text-align: left;
-        // width: 50%;
-        // justify-content: space-between;
-        // margin-right: 25%;
+        
         display: flex;
 
         

@@ -35,11 +35,17 @@ ul,a,a:link, a:visited{
         }
         #bio,#shows:hover{
             border-bottom: 5px solid #fff;
-
+            .section-header{
+                color:#fff;
+            }
+            
             
         }
         #shows{
-            color:#AFAFAF;
+            .section-header{
+                color:#AFAFAF;
+            }
+            
         }
         
         
@@ -96,7 +102,7 @@ ul,a,a:link, a:visited{
     font-size: $mobile-sub-header--size;
     line-height:$mobile-sub-header--lineheight;
     font-weight: $mobile-sub-header--textweight;
-    color: $navbar-text;
+    color: #AFAFAF;
     font-family:"AvenirNextBold",sans-serif;
 }}
 
@@ -512,11 +518,12 @@ ul,a,a:link, a:visited{
     height: auto;
     
     border: 2px solid #AFAFAF;
-    background-color: #E1E1E1;
+    background-color: #FAFAFA;
     border-radius: 5px;
 }
 .input-button{
-
+    font-size: $mobile-sub-header--size;
+    font-family:"AvenirNextDemi";
 }
 .card{
     width: 100%;
@@ -527,14 +534,22 @@ ul,a,a:link, a:visited{
 }
 .getstarted-title{
     margin:16px;
+    font-size:$mobile-page-header--size;
+    color:$navbar-color;
 }
 .comment-form{
     margin: 16px;
     width: auto;
     border-bottom: 2px solid #E1E1E1;
 }
-
-
+.form-container{
+    width: 100%;
+}
+.titles{
+    font-family: "AvenirNextBold";
+        // text-align:start;
+        color:#AFAFAF;
+}
 .comment-name{
     background-color: #FAFAFA;
 }
@@ -562,21 +577,70 @@ ul,a,a:link, a:visited{
     
 }
 @include tablet{
+    .getstarted-title{
+        margin:36px;
+        font-size:$desktop-page-header--size;
+        color:$navbar-color;
+    }
     .input-button{
     
         width: 25%;
         height: auto;
         // display: flex;
-        margin-left:70%;
+        margin: 24px 36px 18px 69%;
     
     
 }
 }
 @include desktop{
-    .comment-form{
+    .getstarted-title{
+        
+        font-size:$desktop-page-header--size;
+        color:$navbar-color;
+    }
+.form-container{
+    width: auto;
+}
+.input{
+    padding: 16px;
+    width: 100%;
+}
+    .getstarted-title{
+        margin:36px;
+    }
+    .card{
+        margin:0 36px;
+        display: flex;
+        flex-direction: column;
+    }
+    .input {
+        font-size: $desktop-bodycopy--size;
+        font-family: "AvenirNext";
+        text-align:start;
+        color:#000000;
+    }
+    .titles{
+        font-size: $desktop-bodycopy--size;
+        font-family: "AvenirNextBold";
+        // text-align:start;
+        color:#AFAFAF;
+    }
+    .user-image{
+        width: 48px;
+        height:48px;
+        border-radius: 50%;
+        margin:16px;
+    }
+    .input-button{
+        width:25%;
+        margin:24px 20% 18px 80%;
+        
+
+}
+    .comments{
         margin:0 25%;
     }
-    .comments{
+    .form-container{
         margin:0 25%;
     }
 }
@@ -585,12 +649,7 @@ ul,a,a:link, a:visited{
     background-color: #000000;
 }
 
-.card{
-    // display: flex;
-    // flex-direction: row;
-    // align-items: flex-start;
-    // margin:16px;
-}
+
 .comment-form{
     display: flex;
     flex-direction: row;
@@ -622,11 +681,9 @@ ul,a,a:link, a:visited{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: $navbar-color;
 }
 .extra-div{
-    // display: flex;
-    // flex-direction: column;
-    // align-self: flex-start;
     width: auto;
     display: flex;
     border-bottom:2px solid #E1E1E1;

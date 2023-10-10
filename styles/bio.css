@@ -49,7 +49,10 @@ ul, a, a:link, a:visited {
 .navbar-list #bio, .navbar-list #shows:hover {
   border-bottom: 5px solid #fff;
 }
-.navbar-list #shows {
+.navbar-list #bio .section-header, .navbar-list #shows:hover .section-header {
+  color: #fff;
+}
+.navbar-list #shows .section-header {
   color: #AFAFAF;
 }
 .navbar-list__title {
@@ -95,7 +98,7 @@ ul, a, a:link, a:visited {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
-  color: #fff;
+  color: #AFAFAF;
   font-family: "AvenirNextBold", sans-serif;
 }
 
@@ -424,7 +427,7 @@ ul, a, a:link, a:visited {
     color: #fff;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .hero-content__title {
     padding: 4.5rem;
   }
@@ -464,8 +467,13 @@ ul, a, a:link, a:visited {
   font-size: "AvenirNext";
   height: auto;
   border: 2px solid #AFAFAF;
-  background-color: #E1E1E1;
+  background-color: #FAFAFA;
   border-radius: 5px;
+}
+
+.input-button {
+  font-size: 14px;
+  font-family: "AvenirNextDemi";
 }
 
 .card {
@@ -474,12 +482,23 @@ ul, a, a:link, a:visited {
 
 .getstarted-title {
   margin: 16px;
+  font-size: 24px;
+  color: #323232;
 }
 
 .comment-form {
   margin: 16px;
   width: auto;
   border-bottom: 2px solid #E1E1E1;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.titles {
+  font-family: "AvenirNextBold";
+  color: #AFAFAF;
 }
 
 .comment-name {
@@ -505,17 +524,62 @@ ul, a, a:link, a:visited {
 }
 
 @media (min-width: 768px) {
+  .getstarted-title {
+    margin: 36px;
+    font-size: 60px;
+    color: #323232;
+  }
   .input-button {
     width: 25%;
     height: auto;
-    margin-left: 70%;
+    margin: 24px 36px 18px 69%;
   }
 }
-@media (min-width: 1024px) {
-  .comment-form {
-    margin: 0 25%;
+@media (min-width: 1280px) {
+  .getstarted-title {
+    font-size: 60px;
+    color: #323232;
+  }
+  .form-container {
+    width: auto;
+  }
+  .input {
+    padding: 16px;
+    width: 100%;
+  }
+  .getstarted-title {
+    margin: 36px;
+  }
+  .card {
+    margin: 0 36px;
+    display: flex;
+    flex-direction: column;
+  }
+  .input {
+    font-size: 14px;
+    font-family: "AvenirNext";
+    text-align: start;
+    color: #000000;
+  }
+  .titles {
+    font-size: 14px;
+    font-family: "AvenirNextBold";
+    color: #AFAFAF;
+  }
+  .user-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 16px;
+  }
+  .input-button {
+    width: 25%;
+    margin: 24px 20% 18px 80%;
   }
   .comments {
+    margin: 0 25%;
+  }
+  .form-container {
     margin: 0 25%;
   }
 }
@@ -551,6 +615,7 @@ ul, a, a:link, a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #323232;
 }
 
 .extra-div {
