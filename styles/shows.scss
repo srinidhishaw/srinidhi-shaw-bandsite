@@ -135,11 +135,10 @@ ul,a,a:link, a:visited{
         }
         .titles{
             position: absolute;
-            display: flex;
-            flex-direction: column;
+            display: block;
             // flex-wrap:wrap;
             // justify-content: center;
-            width: 100%;
+            width: 75%;
             // align-content:center;
             align-self: center;
             // text-align: left;
@@ -177,11 +176,28 @@ ul,a,a:link, a:visited{
     }}
     .hero{
         &-content{
+            &__soundcloud{
+                margin:36px;
+            }
             &__title{
         font-size: $desktop-page-header--size;
         line-height:$desktop-page-header--lineheight;
         color: $navbar-text;
         font-family:"AvenirNextBold",sans-serif;
+    }
+    &__subtitle{
+        font-size: $desktop-sub-header--size;
+        line-height:$desktop-page-header--lineheight;
+        font-weight: $desktop-page-header--textweight;
+        color: $navbar-text;
+        font-family:"AvenirNextBold",sans-serif;
+        margin:36px;
+
+        // position: absolute;
+        // display: flex;
+        // align-self: center;
+        // color: $navbar-text;
+        // margin-left: 1rem;
     }}}
 }
 .hero,.about,.photogallery{
@@ -474,9 +490,49 @@ ul,a,a:link, a:visited{
     }
 }
 @include desktop{
-    .hero-content__title{
-        padding: 4.5rem;
+    .titles{
+        display: flex;
+        flex-direction: row;
     }
+    .hero-content{
+        .titles{
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            // flex-wrap:wrap;
+            // justify-content: center;
+            width: 100%;
+            // align-content:center;
+            align-items: center;
+            // text-align: left;
+            // color: $navbar-text;
+            margin: 36px;
+
+        }
+        &__title{
+        padding: 0 4.5rem;
+    }
+    &__subtitle{
+        font-size: $desktop-sub-header--size;
+        line-height:$desktop-page-header--lineheight;
+        font-weight: $desktop-page-header--textweight;
+        color: $navbar-text;
+        font-family:"AvenirNextBold",sans-serif;
+        padding: 0 4.5rem;
+
+        // position: absolute;
+        // display: flex;
+        // align-self: center;
+        // color: $navbar-text;
+        // margin-left: 1rem;
+    }
+    &__soundcloud{
+        width:100%;
+        margin: 36px;
+        height:166px; 
+
+    }
+}
     .photogallery-content{
         padding: 0 4.5rem;
     }
@@ -592,13 +648,19 @@ ul,a,a:link, a:visited{
 
 
 // }
+
+.shows-container{
+    width: 100%;
+    display: block;
+    margin: 16px 0;
+}
+
 .show-card{
     background-color: #fff;
     transition: background-color 0.3s;
-
     font-size: $mobile-bodycopy--size;
     font-family: "AvenirNext";
-
+    width: 100%;
     border-bottom: 2px solid #E1E1E1;
     display:block;
 }
@@ -608,6 +670,7 @@ ul,a,a:link, a:visited{
 }
 .show-header{
     display: block;
+    margin: 16px;
 }
 .hover-state{
     background-color: #FAFAFA;
@@ -618,20 +681,22 @@ ul,a,a:link, a:visited{
 .inactive-state{
     background-color: #fff;
 }
-.title-array{
+.title-array,.title-array2{
     color:#AFAFAF;
     font-size: $mobile-sub-header--size;
 }
-
 .button{
     background-color: $navbar-color;
     color:#E1E1E1;
     border-radius: 6px;
     border:0px;
-    padding: 36px;
+    padding: 16px;
     width: 100%;
     height: auto;
-    margin:36px
+    font-family: "AvenirNext";
+    font-weight: 700;
+    font-size: $mobile-page-header--size;
+    margin: 0 0 16px 0;
 }
 .button:hover{
     background-color: #000000;
@@ -651,28 +716,49 @@ ul,a,a:link, a:visited{
         // display: none;
     }
     .showcard-title{
-
+        font-size:$desktop-section-header--size;
+        margin: 36px;
     }
     .showcard-title2{
         display: none;
     }
 //add title headers
-    .show-header,.show-header2{
-        width:100vw;
+.title-array{
+    width: 30vw;
+    // margin-right: 36px;
+}
+.show-header2{
+    width:75vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // text-align: left;
+    // justify-content: flex-start;
+    font-size:$desktop-bodycopy--size;
+    margin:36px;
+}
+    .show-header{
+        width:100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        font-size:$desktop-sub-header--size;
+        font-size:$desktop-bodycopy--size;
         margin:36px;
-        // flex-wrap: nowrap
+        // width: 100vw;
+        // flex-wrap: nowrap;
         
     }
     .button{
-        width: 25vw;
+        width: 25%;
+        height: 100%;
+        height: auto;
         font-size:$desktop-sub-header--size;
         font-weight: 700;
         font-family: "AvenirNext";
+        flex-wrap: nowrap;
+        align-self: center;
+
     }
     .title-array2{
         display: none;
@@ -688,18 +774,32 @@ ul,a,a:link, a:visited{
     }
     .showcard-title2{
         width:100%;
+        font-size:$desktop-section-header--size;
         display: flex;
+        margin-right: 10vw;
         
     }
     .showcard-title{
         display: none;
     }
     .show-card{
-        margin-left: 25vw
+        margin-left: 25vw;
+        width:75vw;
     }
     .show-header2{
-        width:100%;
+        width:75vw;
         text-align: left;
+        // width: 50%;
+        // justify-content: space-between;
+        // margin-right: 25%;
+        display: flex;
+
+        
+    }
+    .show-header2 p{
+        width:100%;
+        margin:36px;
+        
     }
     .title-array2{
         display: none;

@@ -458,11 +458,28 @@ ul, a, a:link, a:visited {
   }
 }
 .input {
-  width: 100%;
   padding: 16px;
-  margin: 16px;
-  border: 1px solid #000;
+  width: 90%;
+  height: auto;
+  font-size: "AvenirNext";
+  height: auto;
+  border: 2px solid #AFAFAF;
+  background-color: #E1E1E1;
   border-radius: 5px;
+}
+
+.card {
+  width: 100%;
+}
+
+.getstarted-title {
+  margin: 16px;
+}
+
+.comment-form {
+  margin: 16px;
+  width: auto;
+  border-bottom: 2px solid #E1E1E1;
 }
 
 .comment-name {
@@ -470,10 +487,10 @@ ul, a, a:link, a:visited {
 }
 
 .comment-card {
-  border-bottom: 3px solid #E1E1E1;
-  margin: 0 16px;
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .input-button {
@@ -482,26 +499,35 @@ ul, a, a:link, a:visited {
   border-radius: 6px;
   border: 0px;
   padding: 16px;
-  width: 100%;
+  width: 95%;
   height: auto;
-  margin: 36px;
+  margin: 16px 0;
 }
 
+@media (min-width: 768px) {
+  .input-button {
+    width: 25%;
+    height: auto;
+    margin-left: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  .comment-form {
+    margin: 0 25%;
+  }
+  .comments {
+    margin: 0 25%;
+  }
+}
 .input-button:hover {
   background-color: #000000;
-}
-
-.card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin: 16px;
 }
 
 .comment-form {
   display: flex;
   flex-direction: row;
   margin: 16px;
+  width: 100%;
 }
 
 .user-image {
@@ -528,5 +554,8 @@ ul, a, a:link, a:visited {
 }
 
 .extra-div {
+  width: auto;
   display: flex;
+  border-bottom: 2px solid #E1E1E1;
+  margin: 16px;
 }/*# sourceMappingURL=bio.css.map */

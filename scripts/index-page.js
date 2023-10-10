@@ -1,27 +1,3 @@
-// const nameInput = document.createElement('input');
-// nameInput.type = 'text';
-// nameInput.name = 'name';  // Name attribute for form submission
-// nameInput.placeholder = 'Your Name';
-
-// // Create an input element for the email field
-// const emailInput = document.createElement('input');
-// emailInput.type = 'email';
-// emailInput.name = 'email';  // Name attribute for form submission
-// emailInput.placeholder = 'Your Email';
-
-// // Create a submit button
-// const submitButton = document.createElement('input');
-// submitButton.type = 'submit';
-// submitButton.value = 'Submit';
-
-// // Add the input elements to the form
-// formElement.appendChild(nameInput);
-// formElement.appendChild(emailInput);
-// formElement.appendChild(submitButton);
-
-// Append the form to the body or any other container element
-// document.body.appendChild(formElement);
-
 const commentsArr = [
     {
         name:"Connor Walton",
@@ -45,13 +21,17 @@ const titleArr = {
 }
 const comments = document.createElement("section");
 
-
+const getStartedTitle = document.createElement('h1');
+getStartedTitle.innerText="Join the Conversation";
+document.querySelector("main").appendChild(getStartedTitle);
+getStartedTitle.classList.add("getstarted-title");
 const commentForm = document.createElement('form');
 const userImg = document.createElement("img");
 const inputName = document.createElement("input");
 const inputCom= document.createElement("input");
 const inputButton = document.createElement("input");
 const card = document.createElement("div")
+card.classList.add("card");
 const titleName = document.createElement("p")
 const titleComment=document.createElement("p")
 titleName.innerText=titleArr.name;
@@ -64,14 +44,13 @@ inputCom.type = "text";
 inputName.name = "name";
 inputCom.name = "comment";
 userImg.setAttribute("src","../assets/Images/Mohan-muruge.jpg");
-// userImg.style.width = "36px";
-// userImg.style.height = "36px";
-// userImg.style.borderRadius = "50%";
+
 userImg.classList.add("user-image");
 inputName.placeholder = "Enter your name";
 inputName.classList.add("input")
 inputCom.classList.add("input")
 inputCom.placeholder = "Add a new comment";
+inputCom.style.height="100px";
 inputButton.type = "submit";
 inputButton.value = "Comment";
 inputButton.classList.add("input-button");
@@ -89,7 +68,7 @@ const submissionsArray = [];
 
 commentForm.addEventListener("submit", function (event) {
     
-  event.preventDefault(); //prevents page from refreshing
+  event.preventDefault();
 if(inputName.value !== ""){
   const name = inputName.value;
     const comment = inputCom.value;
@@ -114,20 +93,15 @@ if(inputName.value !== ""){
     displayComment(commentsArr[i]);
   }
   
-  // console.log(commentsArr)
   commentForm.reset();
 }
 });
-
-// console.log(commentsArr);
-
-// const comments1 = document.createElement("section");
 
 
 comments.innerText = "";
 for (let i=0;i<commentsArr.length;i++){
 function displayComment(commentObj){
-        console.log("hi")
+        // console.log("hi")
         const commentCard = document.createElement("article");
         const commentHeader1=document.createElement("div")
         const commentHeader2=document.createElement("div")
@@ -137,44 +111,27 @@ function displayComment(commentObj){
         const colorPlaceholder = document.createElement("div");
         const extraDiv=document.createElement("div");
         colorPlaceholder.style.backgroundColor = "#E1E1E1";
-        // colorPlaceholder.style.width = "36px";
-        // colorPlaceholder.style.height = "36px";
-        // colorPlaceholder.style.borderRadius = "50%";
+        
         commentCard.classList.add("comment-card");
         colorPlaceholder.classList.add("comment-image");
-        // commentImg.classList.add("comment-img");
-        // commentName.classList.add("comment-name");
-        // commentImg.style.borderRadius='50%';
+        
         commentName.innerText = commentObj.name;
         commentTime.innerText = commentObj.timeStamp;
         commentText.innerText = commentObj.comment;
-        // commentText.style.marginLeft='36px';
-        // commentText.style.padding='16px';
-        // commentName.style.padding='0 16px';
+        
         commentName.classList.add("comment-styles");
         commentText.classList.add("comment-styles")
 
         commentName.style.fontSize='$mobile-bodycopy--size' ;
         commentName.style.fontFamily='AvenirNextBold';
-        // commentName.style.color='$navbar-color';
-        // commentCard.style.display='inline-block';
-        // commentCard.style.width="100%";
-        // commentCard.style.height="auto";
-        // commentHeader1.style.display='flex';
-        // commentHeader1.style.justifyContent="flex-start";
-        // commentHeader2.style.display='flex';
-        // commentHeader2.style.justifyContent="space-between";
-        // commentHeader1.appendChild(colorPlaceholder);
+        
         commentCard.appendChild(colorPlaceholder);
         commentHeader1.appendChild(commentName);
         commentHeader1.appendChild(commentTime);
         commentHeader1.classList.add("header-style");
-        // commentHeader2.appendChild(commentHeader1)
-        // commentHeader2.appendChild(commentTime);
-        // commentCard.appendChild(commentHeader2);
+        
         commentCard.appendChild(commentHeader1);
         commentCard.appendChild(commentText);
-        // comments.appendChild(commentCard);
         extraDiv.appendChild(colorPlaceholder);
         extraDiv.appendChild(commentCard)
         comments.appendChild(extraDiv);

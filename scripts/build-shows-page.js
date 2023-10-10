@@ -31,9 +31,9 @@ const showsArr = [
 ]
 
 const titleArr = {
-    date:"Date: ", venue:"Venue: ", location:"Location: "
+    date:"Date: ", venue:"Venue: ", location:"Location:", empty:""
 }
-
+const showsContainer = document.createElement("div");
 const shows = document.createElement("div");
 shows.setAttribute('id',"shows");
 const showCardTitle = document.createElement("h2");
@@ -48,18 +48,21 @@ showCardTitle2.innerText="Shows";
         showCardTitle.classList.add("showcard-title")
 shows.innerText = "";
 // document.querySelector("main").showCardTitle;
-shows.appendChild(showCardTitle)
+showsContainer.appendChild(showCardTitle)
 // const showCardList = document.createElement("div")
 
 const showHeader2=document.createElement("div")
 const showHeaderDate = document.createElement("p");
 const showHeaderVenue = document.createElement("p");
 const showHeaderLoc = document.createElement("p");
-shows.appendChild(showHeader2);
+
 showHeader2.appendChild(showHeaderDate)
 showHeader2.appendChild(showHeaderVenue)
 showHeader2.prepend(showCardTitle2)
 showHeader2.appendChild(showHeaderLoc)
+showsContainer.classList.add("shows-container");
+showsContainer.appendChild(showHeader2);
+
 
             showHeader2.classList.add("show-header2")
 for (let i=0;i<showsArr.length;i++){
@@ -84,6 +87,7 @@ for (let i=0;i<showsArr.length;i++){
             showHeaderVenue.classList.add("title-array");
             showHeaderLoc.innerText=titleArr.location;
             showHeaderLoc.classList.add("title-array");
+            
 
             showButton.classList.add("button")
         
@@ -98,25 +102,29 @@ for (let i=0;i<showsArr.length;i++){
             // showDate.style.color='$navbar-color';
             showHeader.classList.add("show-header");
             const showHeaderDate2 = document.createElement("p");
-const showHeaderVenue2 = document.createElement("p");
-const showHeaderLoc2 = document.createElement("p");
-showHeaderDate2.innerText=titleArr.date;
-console.log(showHeaderDate)
-showHeaderDate2.classList.add("title-array2");
-showHeaderVenue2.innerText=titleArr.venue;
-showHeaderVenue2.classList.add("title-array2");
-showHeaderLoc2.innerText=titleArr.location;
-showHeaderLoc2.classList.add("title-array2");
+            const showHeaderVenue2 = document.createElement("p");
+            const showHeaderLoc2 = document.createElement("p");
+            showHeaderDate2.innerText=titleArr.date;
+            console.log(showHeaderDate)
+
+            showHeaderDate2.classList.add("title-array2");
+            showHeaderVenue2.innerText=titleArr.venue;
+            showHeaderVenue2.classList.add("title-array2");
+            showHeaderLoc2.innerText=titleArr.location;
+            showHeaderLoc2.classList.add("title-array2");
+
+
             showHeader.appendChild(showHeaderDate2);
             showHeader.appendChild(showDate);
             showHeader.appendChild(showHeaderVenue2);
             showHeader.appendChild(showVenue);
             showHeader.appendChild(showHeaderLoc2);
             showHeader.appendChild(showLocation);
-            
+            showHeader.appendChild(showButton);
             showCard.appendChild(showHeader);
-            showCard.appendChild(showButton);
-            shows.appendChild(showCard);
+            
+            showsContainer.appendChild(showCard);
+            shows.appendChild(showsContainer);
             document.querySelector("main").appendChild(shows);
             // document.querySelector("main").appendChild(showCard);
             showCard.classList.add("show-card");

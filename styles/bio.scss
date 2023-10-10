@@ -503,18 +503,38 @@ ul,a,a:link, a:visited{
     }
 }
 .input {
-    width: 100%;
     padding: 16px;
-    margin:16px;
-    border: 1px solid #000;
-    border-radius: 5px
+    width: 90%;
+        height: auto;
+        // margin:16px 0;
+    
+    font-size: "AvenirNext";
+    height: auto;
+    
+    border: 2px solid #AFAFAF;
+    background-color: #E1E1E1;
+    border-radius: 5px;
 }
-// .comment-img img{
-//     width:100px;
-//     height:100px;
-//     filter:grayscale(100%);
-//     border-radius: 50%;
-// }
+.input-button{
+
+}
+.card{
+    width: 100%;
+    
+    // padding: 16px;
+    
+        // margin:36px 0;
+}
+.getstarted-title{
+    margin:16px;
+}
+.comment-form{
+    margin: 16px;
+    width: auto;
+    border-bottom: 2px solid #E1E1E1;
+}
+
+
 .comment-name{
     background-color: #FAFAFA;
 }
@@ -522,11 +542,11 @@ ul,a,a:link, a:visited{
     // background-color: aqua;
 }
 .comment-card{
-    border-bottom:3px solid #E1E1E1;
-    margin:0 16px; 
+    
+    padding:0 16px; 
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
 }
 .input-button{
     
@@ -535,11 +555,30 @@ ul,a,a:link, a:visited{
         border-radius: 6px;
         border:0px;
         padding: 16px;
-        width: 100%;
+        width: 95%;
         height: auto;
-        margin:36px
+        margin:16px 0;
     
     
+}
+@include tablet{
+    .input-button{
+    
+        width: 25%;
+        height: auto;
+        // display: flex;
+        margin-left:70%;
+    
+    
+}
+}
+@include desktop{
+    .comment-form{
+        margin:0 25%;
+    }
+    .comments{
+        margin:0 25%;
+    }
 }
 
 .input-button:hover{
@@ -547,15 +586,16 @@ ul,a,a:link, a:visited{
 }
 
 .card{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin:16px;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: flex-start;
+    // margin:16px;
 }
 .comment-form{
     display: flex;
     flex-direction: row;
     margin:16px;
+    width: 100%;
 }
 .titles{
 
@@ -587,11 +627,12 @@ ul,a,a:link, a:visited{
     // display: flex;
     // flex-direction: column;
     // align-self: flex-start;
-    // width: 100%;
+    width: auto;
     display: flex;
+    border-bottom:2px solid #E1E1E1;
+    margin: 16px;
+    // padding: 16px;
     // align-items: flex-start;
-
-    
 }
 // .comments{
 //     width: 100%;
