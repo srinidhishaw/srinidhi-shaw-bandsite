@@ -77,6 +77,24 @@ class BandSiteAPI{
         }
 
     }
+
+    async likeComment(comId){
+        try{
+            const likeCom = await axios.put(this.baseUrl+"comments/"+`${comId}`+"/like"+"?api_key="+this.apiKey)
+            //     method: 'PUT', 
+            // headers: {
+            //     'Content-Type': 'application/json',
+            // },
+            // body: JSON.stringify(comId),
+            // });
+            // console.log(updatedData)
+            return likeCom
+        }
+        catch{
+            console.error();
+        }
+        
+    }
     
     async getShowDates(){
         try{
@@ -111,18 +129,7 @@ const newcom =
     "comment": "What a cool site"
 };
 
-// console.log(seeShows.deleteComment("e7e8ef59-c27c-42e9-9de3-f99fc99256d2"))
-// console.log(seeShows.deleteComment("48a64df0-46ca-48d9-b547-94467d799a56"))
-// console.log(seeShows.deleteComment("473179f2-1afa-4608-84ac-a71dc43346c5"))
-// console.log(seeShows.deleteComment("ed28620b-6fc3-49b5-b168-32dbb3573f8a"))
-// console.log(seeShows.deleteComment("81f0f615-223e-468f-86b3-5b67dfd1b0d7"))
-// console.log(seeShows.deleteComment("6326432a-4804-49cc-a73c-e6870be0594b"))
-// console.log(seeShows.deleteComment("65a6e690-e34a-4ce5-b669-fd4035209e8d"))
-// console.log(seeShows.deleteComment("7b70b012-9b7c-413f-934b-8a7c6d7158bf"))
-// console.log(seeShows.deleteComment("5b5580cd-cea6-49ea-b10b-62296e913391"))
-// console.log(seeShows.deleteComment("58ea0c9a-ee5c-44c7-bcff-85b0ccc2c371"))
-// console.log(seeShows.deleteComment("8e8934cf-3566-4560-9f06-876061cca431"))
-// console.log(seeShows.deleteComment("897392fa-49a1-42e8-9366-7620b54822ca"))
+
 // console.log(seeShows.deleteComment("bf25c665-eac7-49e9-8b58-8a9924cdaa4b"))
 
 console.log(seeShows.getComments())

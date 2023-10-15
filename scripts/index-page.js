@@ -1,8 +1,9 @@
 import BandSiteAPI from './band-site-api.js';
 
 let apiKey="b1698d1c-8ba4-4a9e-beb7-0a5e27348a39";
-const seeShows = new BandSiteAPI(apiKey);
+const seeComments = new BandSiteAPI(apiKey);
 let commentsArr=[];
+// let likeCount =0;
 // const commentsArr = [
 //     {
 //         name:"Connor Walton",
@@ -26,7 +27,7 @@ let commentsArr=[];
 async function importComments(){
   try {
     commentsArr=[]
-      const commentPromise = await seeShows.getComments();
+      const commentPromise = await seeComments.getComments();
       
       const commentArr = commentPromise.data;
       console.log(commentArr)
@@ -133,7 +134,7 @@ async function submitEvent(event){
           comment
           
         };
-        const postData = await seeShows.postComment(submissionData);
+        const postData = await seeComments.postComment(submissionData);
         console.log(postData)
         comments.innerText = "";
         importComments();
@@ -152,13 +153,32 @@ async function submitEvent(event){
         event.preventDefault();
         const comId = event.target.id;
           console.log("hi")
-          const deleteId = await seeShows.deleteComment(comId);
-        // console.log(postData)
+          const deleteId = await seeComments.deleteComment(comId);
         comments.innerText = "";
         importComments();
       }}
 
       document.addEventListener('click',delComment)
+
+      async function likeComment(event) {
+        // Check if the clicked element is a delete button
+        if (event.target.classList.contains('like-button')) {
+  
+          event.preventDefault();
+          const comId = event.target.id;
+          // const comId = event.target.id;
+          // console.log("hi")
+          // likeCount++;
+          // console.log(commentsArr.find(obj => obj.id === comId))
+          if((commentsArr.find(obj => obj.id === comId)).likes<1){
+            const likeId = await seeComments.likeComment(comId);
+            console.log(likeId)
+          }
+          comments.innerText = "";
+          importComments();
+        }}
+  
+        document.addEventListener('click',likeComment)
     // async function delEvent(event){
     //   console.log("hi")
     //   event.preventDefault();
@@ -186,10 +206,16 @@ async  function displayComment(commentObj){
             const likeButton = document.createElement("button");
             likeButton.classList.add("buttons");
             likeButton.textContent="Like"
+            likeButton.id=`${commentObj.id}`
+            likeButton.classList.add("like-button")
+            const likeCounter = document.createElement("p");
+            likeCounter.innerText="Likes: "+commentObj.likes;
+            likeCounter.id=`${commentObj.id}`;
             const buttonDiv = document.createElement("div");
             buttonDiv.classList.add("button-div");
             buttonDiv.appendChild(delButton);
             buttonDiv.append(likeButton)
+            buttonDiv.appendChild(likeCounter)
             const colorPlaceholder = document.createElement("div");
             const extraDiv=document.createElement("div");
             colorPlaceholder.style.backgroundColor = "#E1E1E1";
