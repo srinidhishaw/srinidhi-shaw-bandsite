@@ -604,6 +604,7 @@ ul, a, a:link, a:visited {
     width: 30vw;
     margin-bottom: 0;
     font-size: 24px;
+    text-align: left;
   }
   .show-header2 {
     width: 75vw;
@@ -618,9 +619,12 @@ ul, a, a:link, a:visited {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: 24px;
     margin: 24px 18px;
+  }
+  .show-header p {
+    width: 300px;
   }
   .button {
     width: 25%;

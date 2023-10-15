@@ -1,24 +1,6 @@
-
-// ?api_key=<your_api_key_here>
-// {"api_key":"03ae98ad-15f5-4aae-b471-58102c9276f5"}
-// const apiUrl ="https://project-1-api.herokuapp.com/comments?api_key=03ae98ad-15f5-4aae-b471-58102c9276f5";
-
-// async function fetchComments(){
-//     try{
-//         const commentArr = await axios.get(apiUrl);
-//     console.log(commentArr.data);
-//     }
-//     catch(error){
-//         console.log("Error");
-//     }
-    
-// }
-
-// fetchComments();
-
 class BandSiteAPI{
     constructor(apiKey){
-        this.apiKey = "b1698d1c-8ba4-4a9e-beb7-0a5e27348a39";
+        this.apiKey = "e81de9cb-7131-4a10-a47d-5300c33f5e3d";
         this.baseUrl = "https://project-1-api.herokuapp.com/";
     }
 
@@ -50,22 +32,7 @@ class BandSiteAPI{
         }
         
     }
-    // const onPageLoad = async () => {
-    //     const response = await fetch(`/api/project/projects`, {
-    //         method: 'GET',
-    //         headers: { 'Content-Type': 'application/json' },
-    //     })
-        
-    //     if (response.ok) {
-    //         console.log(response.json())
     
-    //     } else {
-    //         console.error(err)
-    //     }
-    // }
-    
-    // onPageLoad();
-
     async getComments(){
         try{
             
@@ -81,13 +48,7 @@ class BandSiteAPI{
     async likeComment(comId){
         try{
             const likeCom = await axios.put(this.baseUrl+"comments/"+`${comId}`+"/like"+"?api_key="+this.apiKey)
-            //     method: 'PUT', 
-            // headers: {
-            //     'Content-Type': 'application/json',
-            // },
-            // body: JSON.stringify(comId),
-            // });
-            // console.log(updatedData)
+            
             return likeCom
         }
         catch{
@@ -99,8 +60,8 @@ class BandSiteAPI{
     async getShowDates(){
         try{
             const showDateArr = await axios.get(this.baseUrl+"showdates"+"?api_key="+this.apiKey);
-            // const date = new Date(timestamp);
-            console.log(showDateArr.data);
+            
+            return(showDateArr);
         }
         catch(error){
             console.error();

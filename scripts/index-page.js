@@ -1,6 +1,6 @@
 import BandSiteAPI from './band-site-api.js';
 
-let apiKey="b1698d1c-8ba4-4a9e-beb7-0a5e27348a39";
+let apiKey="e81de9cb-7131-4a10-a47d-5300c33f5e3d";
 const seeComments = new BandSiteAPI(apiKey);
 let commentsArr=[];
 // let likeCount =0;

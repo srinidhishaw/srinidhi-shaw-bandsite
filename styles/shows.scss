@@ -666,11 +666,13 @@ ul,a,a:link, a:visited{
     .showcard-title2{
         display: none;
     }
+
 //add title headers
 .title-array{
     width: 30vw;
     margin-bottom: 0;
     font-size:$desktop-sub-header--size;
+    text-align: left;
 }
 .show-header2{
     width:75vw;
@@ -686,11 +688,14 @@ ul,a,a:link, a:visited{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         font-size:$desktop-sub-header--size;
         margin:24px 18px;
         
         
+    }
+    .show-header p{
+        width:300px;
     }
     .button{
         width: 25%;
@@ -709,6 +714,7 @@ ul,a,a:link, a:visited{
 }
 
 @include desktop{
+    
     .shows{
 
         display: flex;

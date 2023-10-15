@@ -692,9 +692,15 @@ ul,a,a:link, a:visited{
     align-items: flex-end;
 }
 .buttons{
-    width:50px;
-    height: 20px;
+    width:100px;
+    height:100%;
     margin: 16px;
+    padding: 11px;
+    background-color: $navbar-color;
+    font-size: $mobile-sub-header--size;
+    font-family:"AvenirNext";
+    border-radius: 5px;
+    color: #FAFAFA;
 }
 .button-div{
 
