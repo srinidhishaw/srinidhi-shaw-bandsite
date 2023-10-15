@@ -170,7 +170,7 @@ ul,a,a:link, a:visited{
     .hero{
         &-content{
             &__soundcloud{
-                margin:36px;
+                margin:2.25rem;
             }
             &__title{
                 margin-top: 0;
@@ -185,7 +185,7 @@ ul,a,a:link, a:visited{
         font-weight: $desktop-page-header--textweight;
         color: $navbar-text;
         font-family:"AvenirNextBold",sans-serif;
-        margin:0 36px;
+        margin:0 2.25rem;
 
         
     }}}
@@ -508,7 +508,7 @@ ul,a,a:link, a:visited{
     }
     &__soundcloud{
         width:50%;
-        padding: 36px;
+        padding: 2.25rem;
 
     }
 }
@@ -551,14 +551,14 @@ ul,a,a:link, a:visited{
 }
 .input {
     width: 100%;
-    padding: 16px;
-    margin:16px;
+    padding: 1rem;
+    margin:1rem;
     border: 1px solid #000;
     border-radius: 100%
 }
 .comment-img img{
-    width:100px;
-    height:100px;
+    width:6.25rem;
+    height:6.25rem;
     filter:grayscale(100%);
     border-radius: 50%;
 }
@@ -590,12 +590,12 @@ ul,a,a:link, a:visited{
 
 
 .showcard-title{
-    margin: 16px;
+    margin: 1rem;
 }
 .shows-container{
     width: 100%;
     display: block;
-    margin: 16px 0;
+    margin: 1rem 0;
 }
 
 .show-card{
@@ -613,7 +613,7 @@ ul,a,a:link, a:visited{
 }
 .show-header{
     display: block;
-    margin: 16px;
+    margin: 1rem;
 }
 .hover-state{
     background-color: #FAFAFA;
@@ -633,13 +633,13 @@ ul,a,a:link, a:visited{
     color:#E1E1E1;
     border-radius: 6px;
     border:0px;
-    padding: 16px;
+    padding: 1rem;
     width: 100%;
     height: auto;
     font-family: "AvenirNext";
     font-weight: 700;
     font-size: $mobile-page-header--size;
-    margin: 0 0 16px 0;
+    margin: 0 0 1rem 0;
 }
 .button:hover{
     background-color: #000000;
@@ -650,6 +650,9 @@ ul,a,a:link, a:visited{
 
 
 @include tablet{
+    // .shows-container{
+    //     padding: 1.5rem 1.125rem;
+    // }
     .show-card{
         display: flex;
         justify-content: space-between;
@@ -659,9 +662,14 @@ ul,a,a:link, a:visited{
         // display: none;
     }
     .showcard-title{
+        width:100%;
         font-size:$desktop-page-header--size;
-        margin: 24px 18px;
-        color: $navbar-color;
+        font-family: 'AvenirNextBold';
+        display: flex;
+        // margin-left:1.5rem;
+        margin-right:7vw;
+        // padding: 1.5rem 1.125rem;
+        color:$navbar-color;
     }
     .showcard-title2{
         display: none;
@@ -681,7 +689,8 @@ ul,a,a:link, a:visited{
     align-items: center;
     
     font-size:$desktop-sub-header--size;
-    margin:24px 18px;
+    margin:1.5rem 1.125rem;
+    // padding:0 1.5rem;
 }
     .show-header{
         width:100%;
@@ -690,7 +699,8 @@ ul,a,a:link, a:visited{
         align-items: center;
         justify-content: flex-start;
         font-size:$desktop-sub-header--size;
-        margin:24px 18px;
+        margin:1.5rem 1.125rem;
+        // padding: 0 1.5rem;
         
         
     }
@@ -714,6 +724,9 @@ ul,a,a:link, a:visited{
 }
 
 @include desktop{
+    .show-header p{
+        width:275px;
+    }
     
     .shows{
 
@@ -724,13 +737,10 @@ ul,a,a:link, a:visited{
         width:100%;
         font-size:$desktop-page-header--size;
         display: flex;
-        margin-left:24px;
+        margin-left:1.5rem;
         margin-right:7vw;
-        padding: 24px 18px;
-        color:$navbar-color;
-        
-
-        
+        padding: 1.5rem 1.125rem;
+        color:$navbar-color; 
     }
     .showcard-title{
         display: none;
@@ -742,14 +752,11 @@ ul,a,a:link, a:visited{
     .show-header2{
         width:75vw;
         text-align: left;
-        
         display: flex;
-
-        
     }
     .show-header2 p{
         width:100%;
-        margin:36px;
+        margin:2.25rem;
         
     }
     .title-array2{

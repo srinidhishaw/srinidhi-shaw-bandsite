@@ -147,7 +147,7 @@ ul, a, a:link, a:visited {
     font-family: "AvenirNextDemi", sans-serif;
   }
   .hero-content__soundcloud {
-    margin: 36px;
+    margin: 2.25rem;
   }
   .hero-content__title {
     margin-top: 0;
@@ -162,7 +162,7 @@ ul, a, a:link, a:visited {
     font-weight: 700;
     color: #fff;
     font-family: "AvenirNextBold", sans-serif;
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 .hero, .about, .photogallery {
@@ -450,7 +450,7 @@ ul, a, a:link, a:visited {
   }
   .hero-content__soundcloud {
     width: 50%;
-    padding: 36px;
+    padding: 2.25rem;
   }
   .photogallery-content {
     padding: 0 4.5rem;
@@ -483,15 +483,15 @@ ul, a, a:link, a:visited {
 }
 .input {
   width: 100%;
-  padding: 16px;
-  margin: 16px;
+  padding: 1rem;
+  margin: 1rem;
   border: 1px solid #000;
   border-radius: 100%;
 }
 
 .comment-img img {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   filter: grayscale(100%);
   border-radius: 50%;
 }
@@ -520,13 +520,13 @@ ul, a, a:link, a:visited {
 }
 
 .showcard-title {
-  margin: 16px;
+  margin: 1rem;
 }
 
 .shows-container {
   width: 100%;
   display: block;
-  margin: 16px 0;
+  margin: 1rem 0;
 }
 
 .show-card {
@@ -545,7 +545,7 @@ ul, a, a:link, a:visited {
 
 .show-header {
   display: block;
-  margin: 16px;
+  margin: 1rem;
 }
 
 .hover-state {
@@ -570,13 +570,13 @@ ul, a, a:link, a:visited {
   color: #E1E1E1;
   border-radius: 6px;
   border: 0px;
-  padding: 16px;
+  padding: 1rem;
   width: 100%;
   height: auto;
   font-family: "AvenirNext";
   font-weight: 700;
   font-size: 24px;
-  margin: 0 0 16px 0;
+  margin: 0 0 1rem 0;
 }
 
 .button:hover {
@@ -593,8 +593,11 @@ ul, a, a:link, a:visited {
     justify-content: space-between;
   }
   .showcard-title {
+    width: 100%;
     font-size: 60px;
-    margin: 24px 18px;
+    font-family: "AvenirNextBold";
+    display: flex;
+    margin-right: 7vw;
     color: #323232;
   }
   .showcard-title2 {
@@ -612,7 +615,7 @@ ul, a, a:link, a:visited {
     flex-direction: row;
     align-items: center;
     font-size: 24px;
-    margin: 24px 18px;
+    margin: 1.5rem 1.125rem;
   }
   .show-header {
     width: 100%;
@@ -621,7 +624,7 @@ ul, a, a:link, a:visited {
     align-items: center;
     justify-content: flex-start;
     font-size: 24px;
-    margin: 24px 18px;
+    margin: 1.5rem 1.125rem;
   }
   .show-header p {
     width: 300px;
@@ -641,6 +644,9 @@ ul, a, a:link, a:visited {
   }
 }
 @media (min-width: 1280px) {
+  .show-header p {
+    width: 275px;
+  }
   .shows {
     display: flex;
     flex-direction: row;
@@ -649,9 +655,9 @@ ul, a, a:link, a:visited {
     width: 100%;
     font-size: 60px;
     display: flex;
-    margin-left: 24px;
+    margin-left: 1.5rem;
     margin-right: 7vw;
-    padding: 24px 18px;
+    padding: 1.5rem 1.125rem;
     color: #323232;
   }
   .showcard-title {
@@ -668,7 +674,7 @@ ul, a, a:link, a:visited {
   }
   .show-header2 p {
     width: 100%;
-    margin: 36px;
+    margin: 2.25rem;
   }
   .title-array2 {
     display: none;

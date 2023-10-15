@@ -3,6 +3,33 @@ import BandSiteAPI from './band-site-api.js';
 let apiKey="e81de9cb-7131-4a10-a47d-5300c33f5e3d";
 const seeShows = new BandSiteAPI(apiKey);
 let showsArr=[];
+function eventList() {
+const x = document.querySelectorAll("article");
+let i=0;
+let prevC={};
+x.forEach((c) => {
+    let solid = false;
+console.log("hi")
+    c.addEventListener("click", (e) => {
+        // console.log("hi")
+        if (i>0){
+            console.log(prevC);
+            prevC.classList.remove('active-state');
+            
+        }
+        
+       
+        solid = true;
+        prevC = Object.assign(c);  
+        c.classList.toggle("active-state");
+        
+        i++;
+        
+        
+    });
+     
+});
+}
 
 // const showsArr = [
 //     {
@@ -61,10 +88,7 @@ async function importShows(){
       for (let i=0;i<showsArr.length;i++){
         displayShows(showsArr[i]);
       }
-    //   for(let i=showsArr.length-1;i>=0;i--){
-    //     displayComment(showsArr[i]);
-    //   }
-      
+    eventList();
     } catch (error) {
       console.error(error);
   }
@@ -147,7 +171,7 @@ showHeader2.classList.add("show-header2")
             showHeaderLoc2.innerText=titleArr.location;
             showHeaderLoc2.classList.add("title-array2");
 
-
+            showHeader.id=
             showHeader.appendChild(showHeaderDate2);
             showHeader.appendChild(showDate);
             showHeader.appendChild(showHeaderVenue2);
@@ -168,29 +192,28 @@ showHeader2.classList.add("show-header2")
 // displayShows(showsArr[i]);
 // }
 // console.log("show-card");
-const x = document.querySelectorAll("article");
-let i=0;
-let prevC={};
-x.forEach((c) => {
-    let solid = false;
+// function clickShow(event) {
+        
+//     if (event.target.classList.contains('show-header') ||event.target.classList.contains('show-header2')) {
 
-    c.addEventListener("click", (e) => {
-        if (i>0){
-            console.log(prevC);
-            prevC.classList.remove('active-state');
-            
-        }
-        
-       
-        solid = true;
-        prevC = Object.assign(c);  
-        c.classList.toggle("active-state");
-        
-        i++;
-        
-        
-    });
-     
-});
+//       event.preventDefault();
+//       const comId = event.target.id;
+//       // const comId = event.target.id;
+//       // console.log("hi")
+//       // likeCount++;
+//       // console.log(commentsArr.find(obj => obj.id === comId))
+//       if((commentsArr.find(obj => obj.id === comId)).likes<1){
+//         const likeId = await seeComments.likeComment(comId);
+//         console.log(likeId)
+//       }
+//       comments.innerText = "";
+//       importComments();
+//     }}
+
+    // document.addEventListener('click',likeComment)
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     console.log("hi")
 
 
+// });

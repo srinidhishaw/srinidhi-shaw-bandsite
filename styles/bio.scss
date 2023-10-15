@@ -30,16 +30,12 @@ ul,a,a:link, a:visited{
         &__item{
             text-align: center;
             width: 50%;
-            
-            
         }
         #bio,#shows:hover{
-            border-bottom: 5px solid #fff;
+            border-bottom: 0.3125rem solid #fff;
             .section-header{
                 color:#fff;
-            }
-            
-            
+            } 
         }
         #shows{
             .section-header{
@@ -48,11 +44,6 @@ ul,a,a:link, a:visited{
             
         }
         
-        
-        // &__item hr{
-        //     border: 0.1875rem solid #fff;
-        //     margin: 0;
-        // }
         &__title{
             display: flex;
             justify-content: center;
@@ -509,17 +500,15 @@ ul,a,a:link, a:visited{
     }
 }
 .input {
-    padding: 16px;
+    padding: 1rem;
     width: 90%;
-        height: auto;
-        // margin:16px 0;
-    
+    height: auto;
     font-size: "AvenirNext";
     height: auto;
     
-    border: 2px solid #AFAFAF;
+    border: 0.125rem solid #AFAFAF;
     background-color: #FAFAFA;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 .input-button{
     font-size: $mobile-sub-header--size;
@@ -527,38 +516,31 @@ ul,a,a:link, a:visited{
 }
 .card{
     width: 100%;
-    
-    // padding: 16px;
-    
-        // margin:36px 0;
 }
 .getstarted-title{
-    margin:16px;
+    margin:1rem;
     font-size:$mobile-page-header--size;
     color:$navbar-color;
 }
 .comment-form{
-    margin: 16px;
+    margin: 1rem;
     width: auto;
-    border-bottom: 2px solid #E1E1E1;
+    border-bottom: 0.125rem solid #E1E1E1;
 }
 .form-container{
     width: 100%;
 }
 .titles{
     font-family: "AvenirNextBold";
-        // text-align:start;
         color:#AFAFAF;
 }
 .comment-name{
     background-color: #FAFAFA;
 }
-.comment-card:hover{
-    // background-color: aqua;
-}
+
 .comment-card{
     
-    padding:0 16px; 
+    padding:0 1rem; 
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -567,19 +549,19 @@ ul,a,a:link, a:visited{
     
         background-color: $navbar-color;
         color:#E1E1E1;
-        border-radius: 6px;
+        border-radius:0.375rem;
         border:0px;
-        padding: 16px;
+        padding: 1rem;
         width: 95%;
         height: auto;
-        margin:16px 0;
+        margin:1rem 0;
     
     
 }
 
 @include tablet{
     .getstarted-title{
-        margin:36px;
+        margin:2.25rem;
         font-size:$desktop-page-header--size;
         color:$navbar-color;
     }
@@ -588,7 +570,7 @@ ul,a,a:link, a:visited{
         width: 25%;
         height: auto;
         // display: flex;
-        margin: 24px 36px 18px 69%;
+        margin: 1.5rem 2.25rem 1.125rem 69%;
     
     
 }
@@ -603,14 +585,14 @@ ul,a,a:link, a:visited{
     width: auto;
 }
 .input{
-    padding: 16px;
+    padding: 1rem;
     width: 100%;
 }
     .getstarted-title{
-        margin:36px;
+        margin:2.25rem;
     }
     .card{
-        margin:0 36px;
+        margin:0 2.25rem;
         display: flex;
         flex-direction: column;
     }
@@ -623,20 +605,18 @@ ul,a,a:link, a:visited{
     .titles{
         font-size: $desktop-bodycopy--size;
         font-family: "AvenirNextBold";
-        // text-align:start;
+        // font-weight:700px;
         color:#AFAFAF;
     }
     .user-image{
-        width: 48px;
-        height:48px;
+        width: 3rem;
+        height:3rem;
         border-radius: 50%;
-        margin:16px;
+        margin:1rem;
     }
     .input-button{
         width:25%;
-        margin:24px 20% 18px 80%;
-        
-
+        margin:1.5rem 20% 1.125rem 80%;
 }
     .comments{
         margin:0 25%;
@@ -654,30 +634,25 @@ ul,a,a:link, a:visited{
 .comment-form{
     display: flex;
     flex-direction: row;
-    margin:16px;
+    margin:1rem;
     width: 100%;
 }
-.titles{
-
-}
 .user-image{
-    width:36px;
-    height:36px;
+    width:2.25rem;
+    height:2.25rem;
     border-radius: 50%;
-    margin:16px;
+    margin:1rem;
 }
 .comment-image{
-    width:36px;
-    height:36px;
+    width:2.25rem;
+    height:2.25rem;
     border-radius: 50%;
-    margin:16px;
+    margin:1rem;
     display: flex;
     align-self: start;
     flex-shrink: 0; //prevents shrinking bc of display flex vs block
 }
-.comment-styles{
-    // margin:36px;
-}
+
 .header-style{
     display: flex;
     justify-content: space-between;
@@ -687,26 +662,18 @@ ul,a,a:link, a:visited{
 .extra-div{
     width: auto;
     display: flex;
-    border-bottom:2px solid #E1E1E1;
-    margin: 16px;
+    border-bottom:0.125rem solid #E1E1E1;
+    margin: 1rem;
     align-items: flex-end;
 }
 .buttons{
-    width:100px;
+    width:6.25rem;
     height:100%;
-    margin: 16px;
-    padding: 11px;
+    margin: 1rem;
+    padding: 0.6875rem;
     background-color: $navbar-color;
     font-size: $mobile-sub-header--size;
     font-family:"AvenirNext";
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     color: #FAFAFA;
 }
-.button-div{
-
-}
-
-// .comments{
-//     width: 100%;
-//     margin:16px;
-// }
