@@ -623,4 +623,11 @@ ul, a, a:link, a:visited {
   display: flex;
   border-bottom: 2px solid #E1E1E1;
   margin: 16px;
+  align-items: flex-end;
+}
+
+.buttons {
+  width: 50px;
+  height: 20px;
+  margin: 16px;
 }/*# sourceMappingURL=bio.css.map */
