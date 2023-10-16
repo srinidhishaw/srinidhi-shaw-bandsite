@@ -31,35 +31,6 @@ console.log("hi")
 });
 }
 
-// const showsArr = [
-//     {
-//         date:"Mon Sept 06 2021",
-//         venue:"Ronald Lane",
-//         location:"San Francisco, CA"
-//     },
-//     {
-//         date:"Tue Sept 21 2021",
-//         venue:"Pier 3 East",
-//         location:"San Francisco, CA"        },
-//     {
-//         date:"Fri Oct 15 2021",
-//         venue:"View Lounge",
-//         location:"San Francisco, CA"    },
-//     {
-//         date:"Sat Nov 06 2021",
-//         venue:"Hyatt Agency",
-//         location:"San Francisco, CA"    },
-//     {
-//         date:"Fri Nov 26 2021",
-//         venue:"Moscow Center",
-//         location:"San Francisco, CA"    },
-//     {
-//         date:"Wed Dec 15 2021",
-//         venue:"Press Club",
-//         location:"San Francisco, CA"
-//         },
-    
-// ]
 async function importShows(){
     try {
       showsArr=[]
@@ -188,32 +159,3 @@ showHeader2.classList.add("show-header2")
             showCard.classList.add("show-card");
             
         }
-    
-// displayShows(showsArr[i]);
-// }
-// console.log("show-card");
-// function clickShow(event) {
-        
-//     if (event.target.classList.contains('show-header') ||event.target.classList.contains('show-header2')) {
-
-//       event.preventDefault();
-//       const comId = event.target.id;
-//       // const comId = event.target.id;
-//       // console.log("hi")
-//       // likeCount++;
-//       // console.log(commentsArr.find(obj => obj.id === comId))
-//       if((commentsArr.find(obj => obj.id === comId)).likes<1){
-//         const likeId = await seeComments.likeComment(comId);
-//         console.log(likeId)
-//       }
-//       comments.innerText = "";
-//       importComments();
-//     }}
-
-    // document.addEventListener('click',likeComment)
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     console.log("hi")
-
-
-// });

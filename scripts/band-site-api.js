@@ -82,8 +82,6 @@ class BandSiteAPI{
 }
 const seeShows = new BandSiteAPI()
 
-// console.log(seeShows.getShowDates())
-// console.log(seeShows.getShows())
 const newcom = 
 {
     "name": "Nigel",
@@ -91,7 +89,6 @@ const newcom =
 };
 
 
-// console.log(seeShows.deleteComment("bf25c665-eac7-49e9-8b58-8a9924cdaa4b"))
 
 console.log(seeShows.getComments())
 

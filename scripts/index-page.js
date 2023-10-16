@@ -3,26 +3,7 @@ import BandSiteAPI from './band-site-api.js';
 let apiKey="e81de9cb-7131-4a10-a47d-5300c33f5e3d";
 const seeComments = new BandSiteAPI(apiKey);
 let commentsArr=[];
-// let likeCount =0;
-// const commentsArr = [
-//     {
-//         name:"Connor Walton",
-//         timeStamp:"02/17/2021",
-//         comment:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-//     },
-//     {
-//         name:"Emilie Beach",
-//         timeStamp:"01/09/2021",
-//         comment:"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-//     },
-//     {
-//         name:"Miles Acosta",
-//         timeStamp:"12/20/2020",
-//         comment:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-//     },
-    
-// ]
-// console.log(commentArray);
+
 
 async function importComments(){
   try {
@@ -88,7 +69,6 @@ function createForm(){
   inputCom.id = 'comment';
 inputCom.placeholder = 'Add a new comment';
   inputName.name = "name";
-  // inputCom.name = "comment";
   userImg.setAttribute("src","../assets/Images/Mohan-muruge.jpg");
   
   userImg.classList.add("user-image");
@@ -250,49 +230,11 @@ async  function displayComment(commentObj){
           }        
     
   
-// commentForm.addEventListener("submit", submitEvent);
     
   
 
 const band = new BandSiteAPI();
 
 
-// console.log(commentsArr)
-    
-    
-    
-    
-    
-    // window.globalFunction = displayComment;
-
-// const commentsArr = [
-//     {
-//         name:"Connor Walton",
-//         timeStamp:"02/17/2021",
-//         comment:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-//     },
-//     {
-//         name:"Emilie Beach",
-//         timeStamp:"01/09/2021",
-//         comment:"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-//     },
-//     {
-//         name:"Miles Acosta",
-//         timeStamp:"12/20/2020",
-//         comment:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-//     },
-    
-// ]
-
-
-
-
-// commentForm.addEventListener("submit", function (event) {
-    
-//   event.preventDefault();
-// }
-
-// console.log(comments);
- 
 
 
