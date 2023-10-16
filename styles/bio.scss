@@ -106,6 +106,8 @@ ul,a,a:link, a:visited{
         background-color: rgba(0, 0, 0,1);
         margin-top: 0;
         padding-top: 0;
+        // width: 100%;
+        // height:400px;
         &__title{
             font-size: $mobile-page-header--size;
             line-height:$mobile-page-header--lineheight;
@@ -140,6 +142,7 @@ ul,a,a:link, a:visited{
             height: auto;
             opacity: 0.5;
             object-position:center;
+
     }
 
 

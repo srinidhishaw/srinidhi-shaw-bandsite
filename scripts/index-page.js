@@ -55,7 +55,9 @@ async function importComments(){
 }
 importComments();
     
-
+function createForm(){
+  
+}
   const titleArr = {
     name:"Name: ", comment:"Comment: "
   }
@@ -82,9 +84,11 @@ importComments();
   titleComment.classList.add("titles")
   
   inputName.type = "text";
-  inputCom.type = "text";
+  inputCom.type = "textarea";
+  inputCom.id = 'comment';
+inputCom.placeholder = 'Add a new comment';
   inputName.name = "name";
-  inputCom.name = "comment";
+  // inputCom.name = "comment";
   userImg.setAttribute("src","../assets/Images/Mohan-muruge.jpg");
   
   userImg.classList.add("user-image");
@@ -94,7 +98,7 @@ importComments();
   inputCom.placeholder = "Add a new comment";
   inputCom.style.height="100px";
   inputButton.type = "submit";
-  inputButton.value = "COMMENT";
+  // inputButton.value = "COMMENT";
   inputButton.classList.add("input-button");
   commentForm.appendChild(userImg);
   card.appendChild(titleName)
@@ -161,15 +165,11 @@ async function submitEvent(event){
       document.addEventListener('click',delComment)
 
       async function likeComment(event) {
-        // Check if the clicked element is a delete button
+        
         if (event.target.classList.contains('like-button')) {
   
           event.preventDefault();
           const comId = event.target.id;
-          // const comId = event.target.id;
-          // console.log("hi")
-          // likeCount++;
-          // console.log(commentsArr.find(obj => obj.id === comId))
           if((commentsArr.find(obj => obj.id === comId)).likes<1){
             const likeId = await seeComments.likeComment(comId);
             console.log(likeId)
@@ -179,13 +179,6 @@ async function submitEvent(event){
         }}
   
         document.addEventListener('click',likeComment)
-    // async function delEvent(event){
-    //   console.log("hi")
-    //   event.preventDefault();
-    //   const comId = event.target.id;
-    //   console.log(comId);
-    // }
-    // document.querySelectorAll("del-button").addEventListener("click",delEvent);
     
 comments.innerText = "";
 
